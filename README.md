@@ -2,6 +2,7 @@ This is a game project for CIS 3309.
 
 CIS 3309 Game Project 
 This project will give you experience applying all the skills you learned in class to build a complex software system using component-based software design principles. This project is also an exercise in team programming where you will form a team of 2 to complete the project. Your team needs to choose a game from the provided list. The game selection is on a first-come/first-served basis. You need to provide documentation for your project, and have the documents reviewed by me before you can begin implementing the game.  You will not be able to fully implement the game until we finish discussing databases in lecture, but you can still begin the project without using a database.
+
 Game List:
 Are you smarter than a 5th grader?
 Battleship
