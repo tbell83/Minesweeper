@@ -9,7 +9,6 @@ namespace mine_sweeper{
         int size;
         int mines;
         cell[,] grid;
-        bool blowedUp = false;
 
         public minesweeper(int size, int mines){
             this.size = size;
@@ -120,9 +119,9 @@ namespace mine_sweeper{
             for (int x = 0; x < size; x++) {
                 for (int y = 0; y < size; y++) {
                     if (grid[x, y].getCovered()){
-                        output = output + "?";
+                        output = output + "? ";
                     }else{
-                        output = output + grid[x, y].getNeighbors();
+                        output = output + grid[x, y].getNeighbors() + " ";
                     }
                 }
                 output = output + "\r\n";
@@ -130,17 +129,21 @@ namespace mine_sweeper{
             return output;
         }
 
-        public bool BlowedUp() {
-            return blowedUp;
-        }
-        public void probeCell(int x, int y){
-            if (grid[x, y].getMined()){
-                Console.WriteLine("Game over");
-                blowedUp = true;
-                grid[x, y].setUncovered();
-            }else{
-                grid[x, y].setUncovered();
+        public bool makeMove(int x, int y){
+            grid[x, y].setUncovered();
+            if (gameWon()){
+                return true;
             }
+            return false;
+        }
+
+        public bool gameWon(){
+            foreach (cell item in grid){
+                if ((item.getMined() && !item.getCovered()) || (!item.getMined() && item.getCovered())) {
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }

@@ -12,7 +12,10 @@ namespace mine_sweeper
 {
     public partial class GUI : Form
     {
-        minesweeper game = new minesweeper(5, 5);
+        const int size = 5;
+        const int mines = 5;
+
+        minesweeper game = new minesweeper(size, mines);
         public GUI()
         {
             InitializeComponent();
@@ -28,8 +31,14 @@ namespace mine_sweeper
         {
             int x = Convert.ToInt16(txtX.Text)-1;
             int y = Convert.ToInt16(txtY.Text)-1;
-            game.probeCell(x, y);
-            txtOuput.Text = game.drawGame();
+            if (x > size || y > size){
+                MessageBox.Show("Stop fucking up.");
+            }
+            if(!game.makeMove(x, y)) {
+                txtOuput.Text = game.drawGame();
+            }else{
+                MessageBox.Show("Games over.");
+            }
         }
     }
 }
