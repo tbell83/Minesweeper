@@ -12,6 +12,7 @@ namespace mine_sweeper
 {
     public partial class GUI : Form
     {
+        minesweeper game = new minesweeper(5, 5);
         public GUI()
         {
             InitializeComponent();
@@ -19,7 +20,16 @@ namespace mine_sweeper
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            minesweeper game = new minesweeper(10);
+            game.drawField();
+            txtOuput.Text =  game.drawGame();
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            int x = Convert.ToInt16(txtX.Text)-1;
+            int y = Convert.ToInt16(txtY.Text)-1;
+            game.probeCell(x, y);
+            txtOuput.Text = game.drawGame();
         }
     }
 }

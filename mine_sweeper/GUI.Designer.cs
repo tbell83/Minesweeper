@@ -28,21 +28,67 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.txtOuput = new System.Windows.Forms.TextBox();
+            this.txtX = new System.Windows.Forms.TextBox();
+            this.txtY = new System.Windows.Forms.TextBox();
+            this.btnSubmit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // Form1
+            // txtOuput
+            // 
+            this.txtOuput.Location = new System.Drawing.Point(12, 12);
+            this.txtOuput.Multiline = true;
+            this.txtOuput.Name = "txtOuput";
+            this.txtOuput.Size = new System.Drawing.Size(260, 201);
+            this.txtOuput.TabIndex = 0;
+            // 
+            // txtX
+            // 
+            this.txtX.Location = new System.Drawing.Point(12, 230);
+            this.txtX.Name = "txtX";
+            this.txtX.Size = new System.Drawing.Size(38, 20);
+            this.txtX.TabIndex = 1;
+            // 
+            // txtY
+            // 
+            this.txtY.Location = new System.Drawing.Point(56, 230);
+            this.txtY.Name = "txtY";
+            this.txtY.Size = new System.Drawing.Size(42, 20);
+            this.txtY.TabIndex = 2;
+            // 
+            // btnSubmit
+            // 
+            this.btnSubmit.Location = new System.Drawing.Point(197, 227);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(75, 23);
+            this.btnSubmit.TabIndex = 3;
+            this.btnSubmit.Text = "button1";
+            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            // 
+            // GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
-            this.Name = "Form1";
+            this.Controls.Add(this.btnSubmit);
+            this.Controls.Add(this.txtY);
+            this.Controls.Add(this.txtX);
+            this.Controls.Add(this.txtOuput);
+            this.Name = "GUI";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.TextBox txtOuput;
+        private System.Windows.Forms.TextBox txtX;
+        private System.Windows.Forms.TextBox txtY;
+        private System.Windows.Forms.Button btnSubmit;
     }
 }
 
