@@ -8,51 +8,72 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace mine_sweeper
-{
-    public partial class GUI : Form
-    {
-        const int size = 5;
-        const int mines = 5;
+namespace mine_sweeper{
+    public partial class GUI : Form{
+        const int size = 10;
+        const int mines = 2;
+        int wins = 0;
+        int losses = 0;
 
         minesweeper game = new minesweeper(size, mines);
-        public GUI()
-        {
+        public GUI(){
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
+        private void Form1_Load(object sender, EventArgs e){
             game.drawField();
             txtOuput.Text =  game.drawGame();
         }
 
-        private void btnSubmit_Click(object sender, EventArgs e)
-        {
+        private void btnSubmit_Click(object sender, EventArgs e){
             int x = Convert.ToInt16(txtX.Text)-1;
             int y = Convert.ToInt16(txtY.Text)-1;
-            if (x >= size || y >= size){
-                MessageBox.Show("Stop fucking up.");
-            }else{
+            if (validatePlot(x,y)){
                 game.makeMove(x, y);
-                txtOuput.Text = game.drawGame();
             }
-            txtX.Clear();
-            txtY.Clear();
+            afterClick();
         }
 
-        private void btnFlag_Click(object sender, EventArgs e)
-        {
+        private void btnFlag_Click(object sender, EventArgs e){
             int x = Convert.ToInt16(txtX.Text) - 1;
             int y = Convert.ToInt16(txtY.Text) - 1;
-            if (x >= size || y >= size){
-                MessageBox.Show("Stop fucking up.");
-            }else{
+            if (validatePlot(x, y)){
                 game.flagCell(x, y);
-                txtOuput.Text = game.drawGame();
             }
+            afterClick();
+        }
+
+        private bool validatePlot(int x, int y){
+
+            if (x >= size || y >= size){
+                MessageBox.Show(String.Format("Please check that your input is between 1 and {0}.", size));
+                return false;
+            }else{
+                return true;
+            }
+        }
+
+        private void afterClick(){
             txtX.Clear();
             txtY.Clear();
+            txtOuput.Text = game.drawGame();
+            if (game.gameWon()){
+                gameOver(true);
+            }else if(game.gameLost()){
+                gameOver(false);
+            }
+        }
+
+        private void gameOver(bool gameState){
+            btnFlag.Enabled = false;
+            btnSubmit.Enabled = false;
+            txtOuput.Text = game.drawGame();
+            if (gameState){
+                wins++;
+            }else{
+                losses++;
+            }
+            MessageBox.Show(String.Format("Wins: {0}\r\nLosses: {1}", wins, losses));
         }
     }
 }

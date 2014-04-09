@@ -105,11 +105,11 @@ namespace mine_sweeper{
             for (int x = 0; x < size; x++) {
                 for (int y = 0; y < size; y++) {
                     if (grid[x, y].getMined()){
-                        Console.Write("X");
+                        Console.Write("X ");
                     }else if(grid[x,y].getFlagged()){
-                        Console.Write("F");
+                        Console.Write("F ");
                     }else{
-                        Console.Write(grid[x,y].getNeighbors());
+                        Console.Write(grid[x,y].getNeighbors() + " ");
                     }
                 }
                 Console.Write("\r\n");
@@ -121,13 +121,13 @@ namespace mine_sweeper{
             for (int x = 0; x < size; x++) {
                 for (int y = 0; y < size; y++) {
                     if(grid[x,y].getFlagged()){
-                        output = output + "F ";
+                        output = output + "F  ";
                     }else if (grid[x, y].getCovered()){
-                        output = output + "? ";
+                        output = output + "?  ";
                     }else if(grid[x,y].getMined()){
-                        output = output + "X ";
+                        output = output + "X  ";
                     }else{
-                        output = output + grid[x, y].getNeighbors() + " ";
+                        output = output + grid[x, y].getNeighbors() + "  ";
                     }
                 }
                 output = output + "\r\n";
@@ -137,6 +137,16 @@ namespace mine_sweeper{
 
         public void makeMove(int x, int y){
             grid[x, y].setUncovered();
+            if (grid[x, y].getNeighbors() == 0){
+                for (int x2 = x-1; x2 < x+2; x2++){
+                    for (int y2 = y-1; y2 < y+2; y2++){
+                        if((x2 >= 0 && y2 >=0) && (x2 <= size-1 && y2 <= size-1) && grid[x2,y2].getCovered()){
+                            makeMove(x2, y2);
+                            drawGame();
+                        }
+                    }
+                }
+            }
         }
 
         public void flagCell(int x, int y){
