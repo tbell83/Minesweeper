@@ -16,6 +16,7 @@ namespace mine_sweeper{
         int losses = 0;
 
         public minesweeper game = new minesweeper(size, mines);
+
         public GUI(){
             InitializeComponent();
         }
