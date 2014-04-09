@@ -22,7 +22,10 @@ namespace mine_sweeper{
 
         private void Form1_Load(object sender, EventArgs e){
             game.drawField();
-            txtOuput.Text =  game.drawGame();
+            txtOuput.Text = game.drawGame();
+            txtOuput.ReadOnly = true;
+            txtX.Select();
+            this.AcceptButton = btnSubmit;
         }
 
         private void btnSubmit_Click(object sender, EventArgs e){
