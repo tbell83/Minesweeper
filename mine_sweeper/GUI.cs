@@ -15,7 +15,7 @@ namespace mine_sweeper{
         int wins = 0;
         int losses = 0;
 
-        minesweeper game = new minesweeper(size, mines);
+        public minesweeper game = new minesweeper(size, mines);
         public GUI(){
             InitializeComponent();
         }
@@ -64,7 +64,7 @@ namespace mine_sweeper{
             }
         }
 
-        private void gameOver(bool gameState){
+        public void gameOver(bool gameState){
             btnFlag.Enabled = false;
             btnSubmit.Enabled = false;
             txtOuput.Text = game.drawGame();
@@ -73,7 +73,8 @@ namespace mine_sweeper{
             }else{
                 losses++;
             }
-            MessageBox.Show(String.Format("Wins: {0}\r\nLosses: {1}", wins, losses));
+            End_of_Game eog = new End_of_Game(wins, losses, gameState, game);
+            eog.Show();
         }
     }
 }

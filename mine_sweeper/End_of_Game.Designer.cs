@@ -28,11 +28,107 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblLosses = new System.Windows.Forms.Label();
+            this.lblWins = new System.Windows.Forms.Label();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.btnQuit = new System.Windows.Forms.Button();
+            this.lblGameState = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(64, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Wins: ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(64, 45);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Losses:";
+            // 
+            // lblLosses
+            // 
+            this.lblLosses.AutoSize = true;
+            this.lblLosses.Location = new System.Drawing.Point(107, 45);
+            this.lblLosses.Name = "lblLosses";
+            this.lblLosses.Size = new System.Drawing.Size(35, 13);
+            this.lblLosses.TabIndex = 2;
+            this.lblLosses.Text = "label3";
+            // 
+            // lblWins
+            // 
+            this.lblWins.AutoSize = true;
+            this.lblWins.Location = new System.Drawing.Point(107, 32);
+            this.lblWins.Name = "lblWins";
+            this.lblWins.Size = new System.Drawing.Size(35, 13);
+            this.lblWins.TabIndex = 3;
+            this.lblWins.Text = "label4";
+            // 
+            // btnReset
+            // 
+            this.btnReset.Location = new System.Drawing.Point(67, 70);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(75, 23);
+            this.btnReset.TabIndex = 4;
+            this.btnReset.Text = "Play Again";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // btnQuit
+            // 
+            this.btnQuit.Location = new System.Drawing.Point(67, 99);
+            this.btnQuit.Name = "btnQuit";
+            this.btnQuit.Size = new System.Drawing.Size(75, 23);
+            this.btnQuit.TabIndex = 5;
+            this.btnQuit.Text = "Quit";
+            this.btnQuit.UseVisualStyleBackColor = true;
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            // 
+            // lblGameState
+            // 
+            this.lblGameState.AutoSize = true;
+            this.lblGameState.Location = new System.Drawing.Point(85, 19);
+            this.lblGameState.Name = "lblGameState";
+            this.lblGameState.Size = new System.Drawing.Size(35, 13);
+            this.lblGameState.TabIndex = 6;
+            this.lblGameState.Text = "label3";
+            // 
+            // End_of_Game
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(206, 150);
+            this.Controls.Add(this.lblGameState);
+            this.Controls.Add(this.btnQuit);
+            this.Controls.Add(this.btnReset);
+            this.Controls.Add(this.lblWins);
+            this.Controls.Add(this.lblLosses);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Name = "End_of_Game";
             this.Text = "End_of_Game";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblLosses;
+        private System.Windows.Forms.Label lblWins;
+        private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Button btnQuit;
+        private System.Windows.Forms.Label lblGameState;
     }
 }

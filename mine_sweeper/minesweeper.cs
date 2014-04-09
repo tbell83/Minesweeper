@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace mine_sweeper{
-    class minesweeper{
+    public class minesweeper{
         int size;
         int mines;
         cell[,] grid;
@@ -13,7 +13,10 @@ namespace mine_sweeper{
         public minesweeper(int size, int mines){
             this.size = size;
             this.mines = mines;
+            reset();
+        }
 
+        public void reset(){
             grid = new cell[size, size];
             for (int x = 0; x < size; x++) {
                 for (int y = 0; y < size; y++){
@@ -21,7 +24,6 @@ namespace mine_sweeper{
                     grid[x, y] = cell;
                 }
             }
-
             mineTheField();
         }
 
