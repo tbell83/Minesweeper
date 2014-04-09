@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="95608ca7-6964-4b88-8abd-ae09952ada14" name="UMLUseCaseDiagram1" linkedPackageId="e1997bce-611b-4b04-91dd-02dd9b3f5d4d" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="95608ca7-6964-4b88-8abd-ae09952ada14" name="UMLUseCaseDiagram1" linkedPackageId="e1997bce-611b-4b04-91dd-02dd9b3f5d4d" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
   <profileInstances>
     <packageHasProfileInstances Id="413b9287-7a8b-4b7d-9d74-7286b390f032">
       <profileInstance Id="4c412992-ad44-44a5-b02b-203f821bb0ef" name="StandardProfileL2">
@@ -82,7 +82,7 @@
       </subsystem>
     </useCaseModelRootHasTypes>
   </packagedElements>
-  <package Id="e1997bce-611b-4b04-91dd-02dd9b3f5d4d" name="ModelingProject1">
+  <package Id="e1997bce-611b-4b04-91dd-02dd9b3f5d4d" name="Minesweeper">
     <elementDefinition Id="77a5bea6-5393-4f8e-a8bf-72c7bc1d5261" />
   </package>
 </useCaseModelRoot>

@@ -1,0 +1,919 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" dslVersion="1.0.0.0" Id="fd4580c9-bff7-484d-9eeb-2e7f9691d0be" name="GUI_btnFlag_Click" mode="DotNet" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+  <packagedElements>
+    <packageHasNamedElement>
+      <interaction Id="c5c83f8f-a903-43bf-82d5-0330107c9353" name="GUI_btnFlag_Click" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
+        <fragments>
+          <behaviorExecutionSpecification Id="8609b8a6-a24c-4f13-80ad-e61808203030" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="74cb8b37-928d-4aac-b676-cc789bf0e74f" LastKnownName="this : GUI" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="32053c15-ff0b-46e0-a700-9fa58496808c" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="096f8b2e-fdf3-49d2-a76d-fd755ea910d0" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="0f2f661d-5bd2-4314-963d-56da41c8d7dc" LastKnownName="MessageOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="e7cb774a-43c5-4067-aee9-133368b773ff" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="54b18324-3efb-4b4b-b02f-8b16d8e98a54" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="f58c2ad8-367d-4711-be25-cc831f0c2c86" LastKnownName="OperandOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="033120c3-86af-46e8-834d-cfe34390b1ed" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="ce004481-07ab-4266-b7b7-72bac463b7b6" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="503b902b-a869-410a-958b-01b8a2355b58" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="99a7f1d7-ad6d-46f8-b9fd-53c7545f12e0" LastKnownName="MessageOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="e30e1474-229a-494e-bdd8-693f8a780c46" LastKnownName="OperandOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="096f8b2e-fdf3-49d2-a76d-fd755ea910d0" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="887c01a3-c483-45c3-a0db-5d6a4f6f2ba3" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="74cb8b37-928d-4aac-b676-cc789bf0e74f" LastKnownName="this : GUI" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <lostFoundTarget Id="398fe2f7-fc26-40c1-9434-f9320ef33a2c" name="LostFoundTarget" />
+          <messageOccurrenceSpecification Id="0f2f661d-5bd2-4314-963d-56da41c8d7dc" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="74cb8b37-928d-4aac-b676-cc789bf0e74f" LastKnownName="this : GUI" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <combinedFragment Id="40577c7b-9b86-4331-b278-bfcaf75a97e3" name="CombinedFragment1" interactionOperator="Alt" customInteractionOperator="If">
+            <coveredLifelines>
+              <lifelineMoniker Id="74cb8b37-928d-4aac-b676-cc789bf0e74f" LastKnownName="this : GUI" />
+              <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+              <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+            </coveredLifelines>
+            <operands>
+              <interactionOperand Id="c3a1214e-77e0-4079-8403-6402f4b27246" name="InteractionOperand1">
+                <coveredLifelines>
+                  <lifelineMoniker Id="74cb8b37-928d-4aac-b676-cc789bf0e74f" LastKnownName="this : GUI" />
+                  <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+                  <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+                </coveredLifelines>
+                <guard>
+                  <interactionConstraint Id="d66f4361-4fb7-4d53-8835-cdea68c20e0d" guardText="if (x &gt;= size || y &gt;= size)" />
+                </guard>
+                <operandOccurrenceSpecifications>
+                  <operandOccurrenceSpecificationMoniker Id="e7cb774a-43c5-4067-aee9-133368b773ff" LastKnownName="OperandOccurrenceSpecification" />
+                  <operandOccurrenceSpecificationMoniker Id="54b18324-3efb-4b4b-b02f-8b16d8e98a54" LastKnownName="OperandOccurrenceSpecification" />
+                  <operandOccurrenceSpecificationMoniker Id="b432e224-d429-47f5-a922-b8668f867ae5" LastKnownName="OperandOccurrenceSpecification" />
+                  <operandOccurrenceSpecificationMoniker Id="aa9de567-e671-4fe9-ac9b-2d4a35eb3e12" LastKnownName="OperandOccurrenceSpecification" />
+                  <operandOccurrenceSpecificationMoniker Id="cde59507-2f93-4ac1-89e0-c118fce27561" LastKnownName="OperandOccurrenceSpecification" />
+                  <operandOccurrenceSpecificationMoniker Id="717dcede-fb24-458d-9909-11063e03deab" LastKnownName="OperandOccurrenceSpecification" />
+                </operandOccurrenceSpecifications>
+              </interactionOperand>
+              <interactionOperand Id="93fbcfb2-9cce-4c90-9e4b-52e1e97c1720" name="InteractionOperand2">
+                <coveredLifelines>
+                  <lifelineMoniker Id="74cb8b37-928d-4aac-b676-cc789bf0e74f" LastKnownName="this : GUI" />
+                  <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+                  <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+                </coveredLifelines>
+                <fragments>
+                  <combinedFragment Id="d8d0ac6a-fb76-4213-8232-b464473615cd" name="CombinedFragment1" interactionOperator="Loop" customInteractionOperator="Loop">
+                    <coveredLifelines>
+                      <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+                      <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+                    </coveredLifelines>
+                    <operands>
+                      <interactionOperand Id="11fe3c0c-1d81-4262-950d-c5f6aea41fc4" name="InteractionOperand1">
+                        <coveredLifelines>
+                          <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+                          <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+                        </coveredLifelines>
+                        <fragments>
+                          <combinedFragment Id="76af8dc9-3fd4-492f-b53f-1055fb57066a" name="CombinedFragment1" interactionOperator="Loop" customInteractionOperator="Loop">
+                            <coveredLifelines>
+                              <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+                              <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+                            </coveredLifelines>
+                            <operands>
+                              <interactionOperand Id="63e1f259-eff0-4b93-bb15-4bfc786aa3ff" name="InteractionOperand1">
+                                <coveredLifelines>
+                                  <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+                                  <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+                                </coveredLifelines>
+                                <fragments>
+                                  <combinedFragment Id="64098034-640c-40fd-8e79-eb8ef837bd3b" name="CombinedFragment1" interactionOperator="Alt" customInteractionOperator="If">
+                                    <coveredLifelines>
+                                      <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+                                      <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+                                    </coveredLifelines>
+                                    <operands>
+                                      <interactionOperand Id="448177ee-db74-4014-ba03-859c21058263" name="InteractionOperand1">
+                                        <coveredLifelines>
+                                          <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+                                          <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+                                        </coveredLifelines>
+                                        <guard>
+                                          <interactionConstraint Id="77a18fdd-baf9-4b95-86e5-21f5bef1a615" guardText="if (grid[x,y].getFlagged())" />
+                                        </guard>
+                                        <operandOccurrenceSpecifications>
+                                          <operandOccurrenceSpecificationMoniker Id="b76e5ef7-2e33-48d5-9494-c2d6d2a07de3" LastKnownName="OperandOccurrenceSpecification" />
+                                          <operandOccurrenceSpecificationMoniker Id="3a64e4e2-6d46-478c-b91b-2d847c339e42" LastKnownName="OperandOccurrenceSpecification" />
+                                          <operandOccurrenceSpecificationMoniker Id="2b2726ff-e456-46bd-afd9-76db773c7602" LastKnownName="OperandOccurrenceSpecification" />
+                                          <operandOccurrenceSpecificationMoniker Id="1db15bd0-1764-4f43-8f54-293019c733cb" LastKnownName="OperandOccurrenceSpecification" />
+                                        </operandOccurrenceSpecifications>
+                                      </interactionOperand>
+                                      <interactionOperand Id="e888c268-5b4b-40b6-8373-0e3513b715bb" name="InteractionOperand2">
+                                        <coveredLifelines>
+                                          <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+                                          <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+                                        </coveredLifelines>
+                                        <guard>
+                                          <interactionConstraint Id="15bc442c-09d4-44bc-897f-5bf05f6428ea" guardText="if (grid[x, y].getCovered())" />
+                                        </guard>
+                                        <operandOccurrenceSpecifications>
+                                          <operandOccurrenceSpecificationMoniker Id="127e6884-094b-421c-871e-267f542c6687" LastKnownName="OperandOccurrenceSpecification" />
+                                          <operandOccurrenceSpecificationMoniker Id="d6ccdd61-738f-426a-9e8c-3fa8b0db0954" LastKnownName="OperandOccurrenceSpecification" />
+                                          <operandOccurrenceSpecificationMoniker Id="f7cd9117-7254-43f2-ae70-72ccbdad9807" LastKnownName="OperandOccurrenceSpecification" />
+                                          <operandOccurrenceSpecificationMoniker Id="4396bb98-6040-4af5-b50a-ab1ca9a3fc3e" LastKnownName="OperandOccurrenceSpecification" />
+                                        </operandOccurrenceSpecifications>
+                                      </interactionOperand>
+                                      <interactionOperand Id="fd4450d8-c6b0-492c-8fd1-a59bc127e4f9" name="InteractionOperand3">
+                                        <coveredLifelines>
+                                          <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+                                          <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+                                        </coveredLifelines>
+                                        <guard>
+                                          <interactionConstraint Id="3d77266e-f85c-4b97-810f-f5984cac1b6a" guardText="if (grid[x,y].getMined())" />
+                                        </guard>
+                                        <operandOccurrenceSpecifications>
+                                          <operandOccurrenceSpecificationMoniker Id="0f3d330a-88b2-4cce-8625-4c061e1d0825" LastKnownName="OperandOccurrenceSpecification" />
+                                          <operandOccurrenceSpecificationMoniker Id="bf5c1b64-2429-49f7-83bb-2ef4f6cddb9a" LastKnownName="OperandOccurrenceSpecification" />
+                                          <operandOccurrenceSpecificationMoniker Id="462403a9-05aa-485c-b3f2-8c173aa5748a" LastKnownName="OperandOccurrenceSpecification" />
+                                          <operandOccurrenceSpecificationMoniker Id="8879970f-83bb-4667-87a6-0a68f621d3a0" LastKnownName="OperandOccurrenceSpecification" />
+                                        </operandOccurrenceSpecifications>
+                                      </interactionOperand>
+                                      <interactionOperand Id="6432bd6e-a90b-4816-9d7d-eee4573f4b81" name="InteractionOperand4">
+                                        <coveredLifelines>
+                                          <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+                                          <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+                                        </coveredLifelines>
+                                        <guard>
+                                          <interactionConstraint Id="2a544c90-57fe-4aa5-bd82-2a003849974f" guardText="else" />
+                                        </guard>
+                                        <operandOccurrenceSpecifications>
+                                          <operandOccurrenceSpecificationMoniker Id="be912f9a-b132-47a2-9b69-9204a60a37b3" LastKnownName="OperandOccurrenceSpecification" />
+                                          <operandOccurrenceSpecificationMoniker Id="e61d10af-fbc2-46aa-a6e7-896349994f20" LastKnownName="OperandOccurrenceSpecification" />
+                                          <operandOccurrenceSpecificationMoniker Id="1b421ca7-15de-423c-a584-823768ccba98" LastKnownName="OperandOccurrenceSpecification" />
+                                          <operandOccurrenceSpecificationMoniker Id="e6983925-dbfe-4da8-88b3-b69e7575a5b5" LastKnownName="OperandOccurrenceSpecification" />
+                                        </operandOccurrenceSpecifications>
+                                      </interactionOperand>
+                                    </operands>
+                                  </combinedFragment>
+                                </fragments>
+                                <guard>
+                                  <interactionConstraint Id="0fe3104f-07ec-4791-a5fb-49035523c261" guardText="for (int y = 0;y &lt; size; y++)">
+                                    <maxInt>
+                                      <literalString Id="6c99a12e-32ee-4ed4-a59f-73ec6662d727" name="LiteralString1" />
+                                    </maxInt>
+                                    <minInt>
+                                      <literalString Id="7de6fc13-e4ad-4b1f-ab63-cce9044d1f96" name="LiteralString2" />
+                                    </minInt>
+                                  </interactionConstraint>
+                                </guard>
+                                <operandOccurrenceSpecifications>
+                                  <operandOccurrenceSpecificationMoniker Id="6cbe23f2-baed-4e8d-a252-8d95271bca37" LastKnownName="OperandOccurrenceSpecification" />
+                                  <operandOccurrenceSpecificationMoniker Id="f617f5e6-d017-402c-aa0e-818b73028ca3" LastKnownName="OperandOccurrenceSpecification" />
+                                  <operandOccurrenceSpecificationMoniker Id="5eb0e6b0-2168-4e1b-99cd-8ca658fc948c" LastKnownName="OperandOccurrenceSpecification" />
+                                  <operandOccurrenceSpecificationMoniker Id="7014de34-da91-4048-ba8c-d1b7cab055c4" LastKnownName="OperandOccurrenceSpecification" />
+                                </operandOccurrenceSpecifications>
+                              </interactionOperand>
+                            </operands>
+                          </combinedFragment>
+                        </fragments>
+                        <guard>
+                          <interactionConstraint Id="3b99e101-2a79-4854-a166-51468a4d49e6" guardText="for (int x = 0;x &lt; size; x++)">
+                            <maxInt>
+                              <literalString Id="8af45d08-350e-4bac-af2e-9b73fcd738d0" name="LiteralString1" />
+                            </maxInt>
+                            <minInt>
+                              <literalString Id="15ddce82-3fd6-496d-8459-edb21271a34e" name="LiteralString2" />
+                            </minInt>
+                          </interactionConstraint>
+                        </guard>
+                        <operandOccurrenceSpecifications>
+                          <operandOccurrenceSpecificationMoniker Id="689d8faf-bf0a-4f33-b963-7e9252074711" LastKnownName="OperandOccurrenceSpecification" />
+                          <operandOccurrenceSpecificationMoniker Id="8c709aac-0a47-4aa5-9cbb-04f66e538c20" LastKnownName="OperandOccurrenceSpecification" />
+                          <operandOccurrenceSpecificationMoniker Id="156b30e0-4ae6-45e5-bd1a-f80b268f9edf" LastKnownName="OperandOccurrenceSpecification" />
+                          <operandOccurrenceSpecificationMoniker Id="4b09abc4-cb7b-4627-8fb8-9ef01872fb8a" LastKnownName="OperandOccurrenceSpecification" />
+                        </operandOccurrenceSpecifications>
+                      </interactionOperand>
+                    </operands>
+                  </combinedFragment>
+                </fragments>
+                <guard>
+                  <interactionConstraint Id="42b298be-f1f7-4a88-a82f-6e7d1ab62afd" guardText="else" />
+                </guard>
+                <operandOccurrenceSpecifications>
+                  <operandOccurrenceSpecificationMoniker Id="f58c2ad8-367d-4711-be25-cc831f0c2c86" LastKnownName="OperandOccurrenceSpecification" />
+                  <operandOccurrenceSpecificationMoniker Id="e30e1474-229a-494e-bdd8-693f8a780c46" LastKnownName="OperandOccurrenceSpecification" />
+                  <operandOccurrenceSpecificationMoniker Id="f350c011-db21-4203-a16d-33c955baf560" LastKnownName="OperandOccurrenceSpecification" />
+                  <operandOccurrenceSpecificationMoniker Id="78ebdf81-732e-48f1-be27-32cdf9ea548c" LastKnownName="OperandOccurrenceSpecification" />
+                  <operandOccurrenceSpecificationMoniker Id="596565dd-2edd-46a5-bf2c-b396124fac3e" LastKnownName="OperandOccurrenceSpecification" />
+                  <operandOccurrenceSpecificationMoniker Id="4750e0af-bc96-442e-a2a7-c3669c6bcf81" LastKnownName="OperandOccurrenceSpecification" />
+                </operandOccurrenceSpecifications>
+              </interactionOperand>
+            </operands>
+          </combinedFragment>
+          <operandOccurrenceSpecification Id="cde59507-2f93-4ac1-89e0-c118fce27561" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="e7cb774a-43c5-4067-aee9-133368b773ff" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="74cb8b37-928d-4aac-b676-cc789bf0e74f" LastKnownName="this : GUI" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="b432e224-d429-47f5-a922-b8668f867ae5" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="54b18324-3efb-4b4b-b02f-8b16d8e98a54" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="74cb8b37-928d-4aac-b676-cc789bf0e74f" LastKnownName="this : GUI" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="aa9de567-e671-4fe9-ac9b-2d4a35eb3e12" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="717dcede-fb24-458d-9909-11063e03deab" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="f58c2ad8-367d-4711-be25-cc831f0c2c86" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="74cb8b37-928d-4aac-b676-cc789bf0e74f" LastKnownName="this : GUI" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="596565dd-2edd-46a5-bf2c-b396124fac3e" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="f350c011-db21-4203-a16d-33c955baf560" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <behaviorExecutionSpecification Id="7ee0411d-f6ce-4487-bc63-39aada9646f9" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="fdc2a0f1-6a28-442b-b8cb-415de7b84350" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="07cc1498-b33c-4ea0-9465-a4d588c630c2" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="df0b2cfe-2213-4802-9de0-bcde6c193e9a" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="8e511d32-9140-49df-bfca-0333a0fa1ab8" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="6bf4afb8-3298-4e21-b741-862278dba485" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="1ec26e10-a922-40e8-b06f-9367d9baa5f7" LastKnownName="MessageOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="07cc1498-b33c-4ea0-9465-a4d588c630c2" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="b2b0e711-7efb-4bfb-bfaa-cc3a738e6bfa" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="df0b2cfe-2213-4802-9de0-bcde6c193e9a" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="033120c3-86af-46e8-834d-cfe34390b1ed" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="74cb8b37-928d-4aac-b676-cc789bf0e74f" LastKnownName="this : GUI" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification Id="91aeedc1-1533-41e7-ad55-5874984eadc7" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="795259b5-21c8-4bcf-a3ad-0edfde627abb" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="7e3c270f-80b6-4685-bf28-9c7cdf8a4066" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="2ca5d7fb-764f-486e-aaa2-314b4c0f9781" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="d1417651-19cb-4b59-bff4-af1a52062f4a" LastKnownName="MessageOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="7e3c270f-80b6-4685-bf28-9c7cdf8a4066" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="1821fe73-d195-4126-ba45-cf3eea29df91" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="8e511d32-9140-49df-bfca-0333a0fa1ab8" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="2ca5d7fb-764f-486e-aaa2-314b4c0f9781" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="6bf4afb8-3298-4e21-b741-862278dba485" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="d1417651-19cb-4b59-bff4-af1a52062f4a" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="795259b5-21c8-4bcf-a3ad-0edfde627abb" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="c4e58f59-f825-44d6-8a02-961b75b4eeff" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="1ec26e10-a922-40e8-b06f-9367d9baa5f7" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="ce004481-07ab-4266-b7b7-72bac463b7b6" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="74cb8b37-928d-4aac-b676-cc789bf0e74f" LastKnownName="this : GUI" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="fdc2a0f1-6a28-442b-b8cb-415de7b84350" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="006e96b8-6d6f-4e6f-90a4-d4a21209dd44" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification Id="efc556dc-855f-47de-ab5a-79c5d5aacd3f" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="16e57283-3eb7-43a7-9359-ec0bc71d30c7" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="714b4eee-8c2f-4e16-bf19-2a7d4c667829" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="967f8324-3a2a-4fe6-8c6f-3705b1531e1e" LastKnownName="MessageOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="689d8faf-bf0a-4f33-b963-7e9252074711" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="6cbe23f2-baed-4e8d-a252-8d95271bca37" LastKnownName="OperandOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="43af611d-22e3-4d5c-8e04-2af29884f5d0" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="93e519f7-04c9-4593-b991-36740feb68f3" LastKnownName="MessageOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="b76e5ef7-2e33-48d5-9494-c2d6d2a07de3" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="3a64e4e2-6d46-478c-b91b-2d847c339e42" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="127e6884-094b-421c-871e-267f542c6687" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="d6ccdd61-738f-426a-9e8c-3fa8b0db0954" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="0f3d330a-88b2-4cce-8625-4c061e1d0825" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="bf5c1b64-2429-49f7-83bb-2ef4f6cddb9a" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="be912f9a-b132-47a2-9b69-9204a60a37b3" LastKnownName="OperandOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="1f002bb6-efc0-4afb-b11e-66abf0b2e93d" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="5444d8e6-2bad-4fb5-8a54-3bacc19df8df" LastKnownName="MessageOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="e61d10af-fbc2-46aa-a6e7-896349994f20" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="f617f5e6-d017-402c-aa0e-818b73028ca3" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="8c709aac-0a47-4aa5-9cbb-04f66e538c20" LastKnownName="OperandOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="7c2bb150-d6e5-49ad-b347-25c0131fdf41" LastKnownName="MessageOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="714b4eee-8c2f-4e16-bf19-2a7d4c667829" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="72d11ac4-7e58-4bfc-9231-83032db90cae" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="967f8324-3a2a-4fe6-8c6f-3705b1531e1e" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="503b902b-a869-410a-958b-01b8a2355b58" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="74cb8b37-928d-4aac-b676-cc789bf0e74f" LastKnownName="this : GUI" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="156b30e0-4ae6-45e5-bd1a-f80b268f9edf" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="689d8faf-bf0a-4f33-b963-7e9252074711" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="5eb0e6b0-2168-4e1b-99cd-8ca658fc948c" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="6cbe23f2-baed-4e8d-a252-8d95271bca37" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <behaviorExecutionSpecification Id="0ebfab80-b206-4230-b18e-d6431decda7a" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="5b8c2d25-3a26-4358-a9fb-d8f938a0a882" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="cd2f8797-5638-4b0d-95e1-dbf4b2547ab2" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="6ca60dfe-43d3-4060-a82e-cbfa572273ec" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="9668f6b7-59b7-457b-83e1-3802300821b6" LastKnownName="MessageOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="cd2f8797-5638-4b0d-95e1-dbf4b2547ab2" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="981d861c-8201-4a99-ac01-6dce2612ed71" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="6ca60dfe-43d3-4060-a82e-cbfa572273ec" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="43af611d-22e3-4d5c-8e04-2af29884f5d0" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="9668f6b7-59b7-457b-83e1-3802300821b6" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="93e519f7-04c9-4593-b991-36740feb68f3" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="5b8c2d25-3a26-4358-a9fb-d8f938a0a882" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="785f6f50-ae74-463c-9004-a9848cba6ae1" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="b76e5ef7-2e33-48d5-9494-c2d6d2a07de3" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="2b2726ff-e456-46bd-afd9-76db773c7602" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="1db15bd0-1764-4f43-8f54-293019c733cb" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="3a64e4e2-6d46-478c-b91b-2d847c339e42" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="127e6884-094b-421c-871e-267f542c6687" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="f7cd9117-7254-43f2-ae70-72ccbdad9807" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="d6ccdd61-738f-426a-9e8c-3fa8b0db0954" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="4396bb98-6040-4af5-b50a-ab1ca9a3fc3e" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="0f3d330a-88b2-4cce-8625-4c061e1d0825" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="462403a9-05aa-485c-b3f2-8c173aa5748a" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="8879970f-83bb-4667-87a6-0a68f621d3a0" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="bf5c1b64-2429-49f7-83bb-2ef4f6cddb9a" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="be912f9a-b132-47a2-9b69-9204a60a37b3" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="1b421ca7-15de-423c-a584-823768ccba98" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <behaviorExecutionSpecification Id="54a5e9f9-4ff8-4315-9e88-f3f3ae379513" name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="355f7664-4b90-4173-adca-bbe9195086e6" LastKnownName="ExecutionOccurrenceSpecification" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="2b162ef5-66de-4f24-9f5b-80d51b92bb3a" LastKnownName="ExecutionOccurrenceSpecification" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="5fb00f92-8157-4a8e-a879-b82e696ca414" LastKnownName="MessageOccurrenceSpecification" />
+              <messageOccurrenceSpecificationMoniker Id="4eb16c5c-b944-45b8-8c96-0b1095919eca" LastKnownName="MessageOccurrenceSpecification" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="2b162ef5-66de-4f24-9f5b-80d51b92bb3a" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="29008353-260b-4a08-90ee-33df80f43926" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="5fb00f92-8157-4a8e-a879-b82e696ca414" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="1f002bb6-efc0-4afb-b11e-66abf0b2e93d" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="5444d8e6-2bad-4fb5-8a54-3bacc19df8df" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="4eb16c5c-b944-45b8-8c96-0b1095919eca" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="355f7664-4b90-4173-adca-bbe9195086e6" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="48f0610d-1f63-478b-b697-c62c4560958d" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="e6983925-dbfe-4da8-88b3-b69e7575a5b5" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="e61d10af-fbc2-46aa-a6e7-896349994f20" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="7014de34-da91-4048-ba8c-d1b7cab055c4" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="f617f5e6-d017-402c-aa0e-818b73028ca3" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="4b09abc4-cb7b-4627-8fb8-9ef01872fb8a" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="8c709aac-0a47-4aa5-9cbb-04f66e538c20" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="7c2bb150-d6e5-49ad-b347-25c0131fdf41" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="99a7f1d7-ad6d-46f8-b9fd-53c7545f12e0" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="74cb8b37-928d-4aac-b676-cc789bf0e74f" LastKnownName="this : GUI" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="16e57283-3eb7-43a7-9359-ec0bc71d30c7" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="7a2915e0-5c2d-482c-8212-1c13a8b0b196" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="4750e0af-bc96-442e-a2a7-c3669c6bcf81" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="2ebb496b-88a2-4c98-8162-5603466d7078" LastKnownName="this.game.grid[x, y] : cell" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="78ebdf81-732e-48f1-be27-32cdf9ea548c" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" LastKnownName="this.game : minesweeper" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="e30e1474-229a-494e-bdd8-693f8a780c46" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="74cb8b37-928d-4aac-b676-cc789bf0e74f" LastKnownName="this : GUI" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <executionOccurrenceSpecification Id="32053c15-ff0b-46e0-a700-9fa58496808c" name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="65c54601-ae33-452b-aa40-069acaaae5c9" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="74cb8b37-928d-4aac-b676-cc789bf0e74f" LastKnownName="this : GUI" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline Id="74cb8b37-928d-4aac-b676-cc789bf0e74f" name="this : GUI" isActor="false" lifelineDisplayName="this : GUI" referencedInstance="(Assembly=$(782ca736-a90f-43b1-8d71-694a4054be11.OutputPathUri) Namespace=mine_sweeper Type=GUI ObjectInstance=&quot;Object instance 3&quot;)" referencedType="mine_sweeper‎.GUI">
+            <referencesInternal>
+              <reference Id="08a4d607-cdbc-4cc1-977d-82e249dfad63" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=mine_sweeper)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(782ca736-a90f-43b1-8d71-694a4054be11.OutputPathUri)&amp;quot; Namespace=mine_sweeper Type=GUI)&quot;)" tag="DGQL" />
+              <reference Id="272c07a3-4a04-45c5-aa6b-e63939223166" handle="(Assembly=&quot;$(782ca736-a90f-43b1-8d71-694a4054be11.OutputPathUri)&quot; Namespace=mine_sweeper Type=GUI)" tag="DGML" />
+            </referencesInternal>
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker Id="096f8b2e-fdf3-49d2-a76d-fd755ea910d0" LastKnownName="ExecutionOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="32053c15-ff0b-46e0-a700-9fa58496808c" LastKnownName="ExecutionOccurrenceSpecification" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline Id="e4a87546-cc36-45cb-8820-0c81f03c76f8" name="this.game : minesweeper" isActor="false" lifelineDisplayName="this.game : minesweeper" referencedInstance="(Assembly=$(782ca736-a90f-43b1-8d71-694a4054be11.OutputPathUri) Namespace=mine_sweeper Type=GUI Member=game ObjectInstance=&quot;Object instance 18&quot;)" referencedType="mine_sweeper‎.minesweeper">
+            <referencesInternal>
+              <reference Id="1c445a84-a518-47eb-96d5-3670bab1f86e" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=mine_sweeper)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(782ca736-a90f-43b1-8d71-694a4054be11.OutputPathUri)&amp;quot; Namespace=mine_sweeper Type=minesweeper)&quot;)" tag="DGQL" />
+              <reference Id="65ff4c01-df33-4ea5-b0fc-06c7e20de01a" handle="(Assembly=&quot;$(782ca736-a90f-43b1-8d71-694a4054be11.OutputPathUri)&quot; Namespace=mine_sweeper Type=minesweeper)" tag="DGML" />
+            </referencesInternal>
+            <topLevelOccurrences>
+              <operandOccurrenceSpecificationMoniker Id="b432e224-d429-47f5-a922-b8668f867ae5" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="aa9de567-e671-4fe9-ac9b-2d4a35eb3e12" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="f350c011-db21-4203-a16d-33c955baf560" LastKnownName="OperandOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="07cc1498-b33c-4ea0-9465-a4d588c630c2" LastKnownName="ExecutionOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="fdc2a0f1-6a28-442b-b8cb-415de7b84350" LastKnownName="ExecutionOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="714b4eee-8c2f-4e16-bf19-2a7d4c667829" LastKnownName="ExecutionOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="16e57283-3eb7-43a7-9359-ec0bc71d30c7" LastKnownName="ExecutionOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="78ebdf81-732e-48f1-be27-32cdf9ea548c" LastKnownName="OperandOccurrenceSpecification" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline Id="2ebb496b-88a2-4c98-8162-5603466d7078" name="this.game.grid[x, y] : cell" isActor="false" lifelineDisplayName="this.game.grid[x, y] : cell" referencedInstance="(Assembly=$(782ca736-a90f-43b1-8d71-694a4054be11.OutputPathUri) Namespace=mine_sweeper Type=minesweeper Member=grid ArrayInstance=[x, y] ObjectInstance=&quot;Object instance 20&quot;)" referencedType="mine_sweeper‎.cell">
+            <referencesInternal>
+              <reference Id="1e1f02cd-402b-435a-9d92-69714c9d2382" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=mine_sweeper)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(782ca736-a90f-43b1-8d71-694a4054be11.OutputPathUri)&amp;quot; Namespace=mine_sweeper Type=cell)&quot;)" tag="DGQL" />
+              <reference Id="da93e6b3-c052-4896-947a-2005d560d24e" handle="(Assembly=&quot;$(782ca736-a90f-43b1-8d71-694a4054be11.OutputPathUri)&quot; Namespace=mine_sweeper Type=cell)" tag="DGML" />
+            </referencesInternal>
+            <topLevelOccurrences>
+              <operandOccurrenceSpecificationMoniker Id="cde59507-2f93-4ac1-89e0-c118fce27561" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="717dcede-fb24-458d-9909-11063e03deab" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="596565dd-2edd-46a5-bf2c-b396124fac3e" LastKnownName="OperandOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="7e3c270f-80b6-4685-bf28-9c7cdf8a4066" LastKnownName="ExecutionOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="795259b5-21c8-4bcf-a3ad-0edfde627abb" LastKnownName="ExecutionOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="156b30e0-4ae6-45e5-bd1a-f80b268f9edf" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="5eb0e6b0-2168-4e1b-99cd-8ca658fc948c" LastKnownName="OperandOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="cd2f8797-5638-4b0d-95e1-dbf4b2547ab2" LastKnownName="ExecutionOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="5b8c2d25-3a26-4358-a9fb-d8f938a0a882" LastKnownName="ExecutionOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="2b2726ff-e456-46bd-afd9-76db773c7602" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="1db15bd0-1764-4f43-8f54-293019c733cb" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="f7cd9117-7254-43f2-ae70-72ccbdad9807" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="4396bb98-6040-4af5-b50a-ab1ca9a3fc3e" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="462403a9-05aa-485c-b3f2-8c173aa5748a" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="8879970f-83bb-4667-87a6-0a68f621d3a0" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="1b421ca7-15de-423c-a584-823768ccba98" LastKnownName="OperandOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="2b162ef5-66de-4f24-9f5b-80d51b92bb3a" LastKnownName="ExecutionOccurrenceSpecification" />
+              <executionOccurrenceSpecificationMoniker Id="355f7664-4b90-4173-adca-bbe9195086e6" LastKnownName="ExecutionOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="e6983925-dbfe-4da8-88b3-b69e7575a5b5" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="7014de34-da91-4048-ba8c-d1b7cab055c4" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="4b09abc4-cb7b-4627-8fb8-9ef01872fb8a" LastKnownName="OperandOccurrenceSpecification" />
+              <operandOccurrenceSpecificationMoniker Id="4750e0af-bc96-442e-a2a7-c3669c6bcf81" LastKnownName="OperandOccurrenceSpecification" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message Id="7a960519-bf45-48da-84bf-4c68a09924d4" name="btnFlag_Click" messageKind="Found" messageSort="AsynchCall" createSelfMessage="false">
+            <referencesInternal>
+              <reference Id="48aea485-b122-4e04-83a0-b05e018ecfe7" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=mine_sweeper)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(782ca736-a90f-43b1-8d71-694a4054be11.OutputPathUri)&amp;quot; Namespace=mine_sweeper Type=GUI)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(782ca736-a90f-43b1-8d71-694a4054be11.OutputPathUri)&amp;quot; Namespace=mine_sweeper Type=GUI Member=(Name=btnFlag_Click OverloadingParameters=[(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/mscorlib.dll&amp;quot; Namespace=System Type=Object),(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/mscorlib.dll&amp;quot; Namespace=System Type=EventArgs)]))&quot;)" tag="DGQL" />
+              <reference Id="343c19b3-398d-4fd6-a2a3-d6cb8b79f5fb" handle="(Assembly=&quot;$(782ca736-a90f-43b1-8d71-694a4054be11.OutputPathUri)&quot; Namespace=mine_sweeper Type=GUI Member=(Name=btnFlag_Click OverloadingParameters=[(Assembly=&quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/mscorlib.dll&quot; Namespace=System Type=Object),(Assembly=&quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/mscorlib.dll&quot; Namespace=System Type=EventArgs)]))" tag="DGML" />
+            </referencesInternal>
+            <sendEvent>
+              <lostFoundTargetMoniker Id="398fe2f7-fc26-40c1-9434-f9320ef33a2c" LastKnownName="LostFoundTarget" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="0f2f661d-5bd2-4314-963d-56da41c8d7dc" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="ed756365-47f6-482c-a36e-7d54edb28b52" name="flagCell" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false" signatureText="game.flagCell(x, y)">
+            <referencesInternal>
+              <reference Id="006b7f96-9235-44e3-b05a-2f76c6928037" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=mine_sweeper)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(782ca736-a90f-43b1-8d71-694a4054be11.OutputPathUri)&amp;quot; Namespace=mine_sweeper Type=minesweeper)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(782ca736-a90f-43b1-8d71-694a4054be11.OutputPathUri)&amp;quot; Namespace=mine_sweeper Type=minesweeper Member=(Name=flagCell OverloadingParameters=[(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/mscorlib.dll&amp;quot; Namespace=System Type=Int32),(Assembly=&amp;quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/mscorlib.dll&amp;quot; Namespace=System Type=Int32)]))&quot;)" tag="DGQL" />
+              <reference Id="1370f13b-2f94-4774-8c62-d6d0ebc19e13" handle="(Assembly=&quot;$(782ca736-a90f-43b1-8d71-694a4054be11.OutputPathUri)&quot; Namespace=mine_sweeper Type=minesweeper Member=(Name=flagCell OverloadingParameters=[(Assembly=&quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/mscorlib.dll&quot; Namespace=System Type=Int32),(Assembly=&quot;$(FxReferenceAssembliesUri)/.NETFramework/v4.5/mscorlib.dll&quot; Namespace=System Type=Int32)]))" tag="DGML" />
+            </referencesInternal>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="033120c3-86af-46e8-834d-cfe34390b1ed" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="df0b2cfe-2213-4802-9de0-bcde6c193e9a" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="81181d9f-ffda-4c24-abe1-e51ce53a78b9" name="setFlagged" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false" signatureText="grid[x, y].setFlagged()">
+            <referencesInternal>
+              <reference Id="35fc9ea8-3812-4fb8-86d6-c0ad6e24032d" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=mine_sweeper)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(782ca736-a90f-43b1-8d71-694a4054be11.OutputPathUri)&amp;quot; Namespace=mine_sweeper Type=cell)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(782ca736-a90f-43b1-8d71-694a4054be11.OutputPathUri)&amp;quot; Namespace=mine_sweeper Type=cell Member=setFlagged)&quot;)" tag="DGQL" />
+              <reference Id="d9dfedde-74c6-45e4-afb8-901b9ef00ad4" handle="(Assembly=&quot;$(782ca736-a90f-43b1-8d71-694a4054be11.OutputPathUri)&quot; Namespace=mine_sweeper Type=cell Member=setFlagged)" tag="DGML" />
+            </referencesInternal>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="8e511d32-9140-49df-bfca-0333a0fa1ab8" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="2ca5d7fb-764f-486e-aaa2-314b4c0f9781" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="09622806-b707-4dfa-876f-67a09edd1ee5" name="&lt;&lt;return&gt;&gt;" messageKind="Complete" messageSort="Reply" createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="d1417651-19cb-4b59-bff4-af1a52062f4a" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="6bf4afb8-3298-4e21-b741-862278dba485" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="764d44af-86b2-480a-a746-67276fae3d62" name="&lt;&lt;return&gt;&gt;" messageKind="Complete" messageSort="Reply" createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="1ec26e10-a922-40e8-b06f-9367d9baa5f7" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="ce004481-07ab-4266-b7b7-72bac463b7b6" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="cb472e07-187a-494e-85ab-d6a3bc9ae3ef" name="drawGame" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false" signatureText="game.drawGame()">
+            <referencesInternal>
+              <reference Id="41c4e137-6c9f-4c7a-958b-a72c25e45eb1" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=mine_sweeper)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(782ca736-a90f-43b1-8d71-694a4054be11.OutputPathUri)&amp;quot; Namespace=mine_sweeper Type=minesweeper)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(782ca736-a90f-43b1-8d71-694a4054be11.OutputPathUri)&amp;quot; Namespace=mine_sweeper Type=minesweeper Member=drawGame)&quot;)" tag="DGQL" />
+              <reference Id="a8e44c4d-da56-4ba8-b35a-2e126613d26b" handle="(Assembly=&quot;$(782ca736-a90f-43b1-8d71-694a4054be11.OutputPathUri)&quot; Namespace=mine_sweeper Type=minesweeper Member=drawGame)" tag="DGML" />
+            </referencesInternal>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="503b902b-a869-410a-958b-01b8a2355b58" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="967f8324-3a2a-4fe6-8c6f-3705b1531e1e" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="aebe45d9-ed9f-40b9-a621-9d44d2a0e1a7" name="getFlagged" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false" signatureText="grid[x,y].getFlagged()">
+            <referencesInternal>
+              <reference Id="d03e0fe7-9a8f-42e2-9315-11563c768c2b" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=mine_sweeper)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(782ca736-a90f-43b1-8d71-694a4054be11.OutputPathUri)&amp;quot; Namespace=mine_sweeper Type=cell)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(782ca736-a90f-43b1-8d71-694a4054be11.OutputPathUri)&amp;quot; Namespace=mine_sweeper Type=cell Member=getFlagged)&quot;)" tag="DGQL" />
+              <reference Id="2adff363-fbe2-45ff-a02e-483fc020cc65" handle="(Assembly=&quot;$(782ca736-a90f-43b1-8d71-694a4054be11.OutputPathUri)&quot; Namespace=mine_sweeper Type=cell Member=getFlagged)" tag="DGML" />
+            </referencesInternal>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="43af611d-22e3-4d5c-8e04-2af29884f5d0" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="6ca60dfe-43d3-4060-a82e-cbfa572273ec" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="cc19686b-1fe9-4a44-8a2e-b403893fb034" name="&lt;&lt;return&gt;&gt;" messageKind="Complete" messageSort="Reply" createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="9668f6b7-59b7-457b-83e1-3802300821b6" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="93e519f7-04c9-4593-b991-36740feb68f3" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="ef0afc56-30dd-4fdb-abb7-69a89aef49f4" name="getNeighbors" messageKind="Complete" messageSort="SynchCall" createSelfMessage="false" signatureText="grid[x, y].getNeighbors()">
+            <referencesInternal>
+              <reference Id="15a88de9-87f4-498a-8ac9-ff944b0fbe42" handle="+ Id.Equals(&quot;Microsoft.Solution.ClassView&quot;) /&#xD;&#xA;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Namespace=mine_sweeper)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(782ca736-a90f-43b1-8d71-694a4054be11.OutputPathUri)&amp;quot; Namespace=mine_sweeper Type=cell)&quot;)/&#xD;&#xA;&quot;Microsoft.Contains&quot;/&#xD;&#xA;+ Id.EqualsIgnoreCase(&quot;(Assembly=&amp;quot;$(782ca736-a90f-43b1-8d71-694a4054be11.OutputPathUri)&amp;quot; Namespace=mine_sweeper Type=cell Member=getNeighbors)&quot;)" tag="DGQL" />
+              <reference Id="7625f58a-53fe-4fe5-9018-51edc20084f4" handle="(Assembly=&quot;$(782ca736-a90f-43b1-8d71-694a4054be11.OutputPathUri)&quot; Namespace=mine_sweeper Type=cell Member=getNeighbors)" tag="DGML" />
+            </referencesInternal>
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="1f002bb6-efc0-4afb-b11e-66abf0b2e93d" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="5fb00f92-8157-4a8e-a879-b82e696ca414" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="ae92fa25-170d-426c-bd6e-33e7c0efe148" name="&lt;&lt;return&gt;&gt;" messageKind="Complete" messageSort="Reply" createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="4eb16c5c-b944-45b8-8c96-0b1095919eca" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="5444d8e6-2bad-4fb5-8a54-3bacc19df8df" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+          <message Id="38703282-63b9-478f-8241-e47e6d52a410" name="&lt;&lt;return&gt;&gt;" messageKind="Complete" messageSort="Reply" createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker Id="7c2bb150-d6e5-49ad-b347-25c0131fdf41" LastKnownName="MessageOccurrenceSpecification" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker Id="99a7f1d7-ad6d-46f8-b9fd-53c7545f12e0" LastKnownName="MessageOccurrenceSpecification" />
+            </receiveEvent>
+          </message>
+        </messages>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="887c01a3-c483-45c3-a0db-5d6a4f6f2ba3" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="65c54601-ae33-452b-aa40-069acaaae5c9" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="b2b0e711-7efb-4bfb-bfaa-cc3a738e6bfa" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="006e96b8-6d6f-4e6f-90a4-d4a21209dd44" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="1821fe73-d195-4126-ba45-cf3eea29df91" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="c4e58f59-f825-44d6-8a02-961b75b4eeff" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="72d11ac4-7e58-4bfc-9231-83032db90cae" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="7a2915e0-5c2d-482c-8212-1c13a8b0b196" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="981d861c-8201-4a99-ac01-6dce2612ed71" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="785f6f50-ae74-463c-9004-a9848cba6ae1" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="29008353-260b-4a08-90ee-33df80f43926" name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="48f0610d-1f63-478b-b697-c62c4560958d" name="ExecutionEvent" />
+    </packageHasNamedElement>
+  </packagedElements>
+</SequenceDesignerModel>
