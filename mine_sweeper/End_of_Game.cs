@@ -11,7 +11,7 @@ using System.Windows.Forms;
 namespace mine_sweeper{
     public partial class End_of_Game : Form{
         minesweeper game;
-        public End_of_Game(int wins, int losses, bool gameState, minesweeper game){
+        public End_of_Game(int wins, int losses, bool gameState){
             InitializeComponent();
             this.game = game;
             string gameStateText;
@@ -26,8 +26,6 @@ namespace mine_sweeper{
         }
 
         private void btnReset_Click(object sender, EventArgs e){
-            game.reset();
-            
             this.Close();
         }
 

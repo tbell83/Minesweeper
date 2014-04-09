@@ -73,8 +73,12 @@ namespace mine_sweeper{
             }else{
                 losses++;
             }
-            End_of_Game eog = new End_of_Game(wins, losses, gameState, game);
+            End_of_Game eog = new End_of_Game(wins, losses, gameState);
             eog.Show();
+            game.reset();
+            txtOuput.Text = game.drawGame();
+            btnFlag.Enabled = true;
+            btnSubmit.Enabled = true;
         }
     }
 }
