@@ -14,6 +14,7 @@ namespace mine_sweeper{
         const int mines = 2;
         int wins = 0;
         int losses = 0;
+        Button[,] grid;
 
         public minesweeper game = new minesweeper(size, mines);
 
@@ -23,28 +24,6 @@ namespace mine_sweeper{
 
         private void Form1_Load(object sender, EventArgs e){
             game.drawField();
-            txtOuput.Text = game.drawGame();
-            txtOuput.ReadOnly = true;
-            txtX.Select();
-            this.AcceptButton = btnSubmit;
-        }
-
-        private void btnSubmit_Click(object sender, EventArgs e){
-            int x = Convert.ToInt16(txtX.Text)-1;
-            int y = Convert.ToInt16(txtY.Text)-1;
-            if (validatePlot(x,y)){
-                game.makeMove(x, y);
-            }
-            afterClick();
-        }
-
-        private void btnFlag_Click(object sender, EventArgs e){
-            int x = Convert.ToInt16(txtX.Text) - 1;
-            int y = Convert.ToInt16(txtY.Text) - 1;
-            if (validatePlot(x, y)){
-                game.flagCell(x, y);
-            }
-            afterClick();
         }
 
         private bool validatePlot(int x, int y){
@@ -58,9 +37,6 @@ namespace mine_sweeper{
         }
 
         private void afterClick(){
-            txtX.Clear();
-            txtY.Clear();
-            txtOuput.Text = game.drawGame();
             if (game.gameWon()){
                 gameOver(true);
             }else if(game.gameLost()){
@@ -69,9 +45,6 @@ namespace mine_sweeper{
         }
 
         public void gameOver(bool gameState){
-            btnFlag.Enabled = false;
-            btnSubmit.Enabled = false;
-            txtOuput.Text = game.drawGame();
             if (gameState){
                 wins++;
             }else{
@@ -80,9 +53,11 @@ namespace mine_sweeper{
             End_of_Game eog = new End_of_Game(wins, losses, gameState);
             eog.Show();
             game.reset();
-            txtOuput.Text = game.drawGame();
-            btnFlag.Enabled = true;
-            btnSubmit.Enabled = true;
+        }
+
+        public void generateGrid(){
+            grid = new Button[size,size];
+
         }
     }
 }
