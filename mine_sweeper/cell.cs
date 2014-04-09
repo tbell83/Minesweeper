@@ -26,20 +26,24 @@ namespace mine_sweeper{
             return neighbors;
         }
 
-        public void setMined(bool mine){
-            this.mine = mine;
+        public void setMined(){
+            mine = true;
         }
 
         public bool getMined(){
-            if(mine == true){
-                return true;
+            return mine;
+        }
+
+        public void setFlagged(){
+            if (flagged){
+                flagged = false;
             }else{
-                return false;
+                flagged = true;
             }
         }
 
-        public void setFlagged(bool flagged){
-            this.flagged = flagged;
+        public bool getFlagged(){
+            return flagged;
         }
 
         public void setUncovered(){
@@ -47,12 +51,7 @@ namespace mine_sweeper{
         }
 
         public bool getCovered(){
-            if (covered){
-                return true;
-            }else{
-                return false;
-            }
+            return covered;
         }
-
     }
 }

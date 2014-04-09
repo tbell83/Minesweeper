@@ -1,0 +1,2001 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel"
+  dslVersion="1.0.0.0"
+  Id="92575e73-3a44-4eaf-9b4c-b4845579bf54"
+  name="mine_sweeper"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="aae3b942-04a8-4a3a-b952-f1e4f81a34b8"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3Dmine_sweeper"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="c5dfd3f5-aaca-4ce9-a6f0-6502a0fb75c5"
+        name="cell"
+        visibility="Private"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="02dac416-edc9-4adf-aadc-4d8c55d94591"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Ftbell%2FSource%2FRepos%2FGame%2Fmine_sweeper%2Fbin%2FDebug%2Fmine_sweeper.exe Namespace%3Dmine_sweeper Type%3D(Name%3Dcell ArrayRank%3D2 ParentType%3Dcell)"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="b747e754-abec-41ce-8536-21ca8fdcf85f"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e62c917f-9afb-4ca8-ad51-fdd97880fc68">
+                <propertyInstance
+                  Id="2e6386d1-d406-44d2-9ce2-74d83526f308"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="99845450-f877-488b-aa3e-20c509a65cda">
+                <propertyInstance
+                  Id="0069952e-fa56-4bfa-ac50-b35e795cf355"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="02adcea9-8fa9-4593-af61-706be3bffe52">
+                <propertyInstance
+                  Id="92994958-35db-445c-b957-9a3528f9c28b"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="89246bc8-6b91-44bc-a509-6db745cf8ade">
+                <propertyInstance
+                  Id="9d90d3d5-0001-4408-b33e-44f3e2e4a249"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6c7c3f9a-8c05-4652-a146-23e532f9c9f5">
+                <propertyInstance
+                  Id="b4303611-72f3-4912-99f0-6271e6f281c4"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="968c08f0-dad5-4dd2-a36b-88030bac8fe2"
+            name="covered"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="7e27bf15-8ba0-4280-957e-6e71269b54a2"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Ftbell%2FSource%2FRepos%2FGame%2Fmine_sweeper%2Fbin%2FDebug%2Fmine_sweeper.exe Namespace%3Dmine_sweeper Type%3Dcell Member%3Dcovered"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="290c060f-f168-4597-82b7-c3d8b15e7add"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b00d2e21-b27e-4989-ad1d-cb5e5ddcad68">
+                    <propertyInstance
+                      Id="7f540ec0-8643-4fdf-ae4d-5ed201922d3a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="985d2e45-5012-464f-aa22-aaecc2d344a3">
+                    <propertyInstance
+                      Id="5b57ca6e-0984-44f5-9468-6b33ef52ea44"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e4a25803-d432-4f9d-b8af-d1084973e759">
+                    <propertyInstance
+                      Id="aff2430b-369a-44d0-9d1b-02029f1c9dee"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cb9ee0d1-a6c0-481f-9d2a-34d49a937931">
+                    <propertyInstance
+                      Id="8cf29e93-70fa-40f0-808a-0fe87d7d9353"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a3545cbc-94b0-461d-83ad-c01d3dd11011">
+                    <propertyInstance
+                      Id="c2277ea3-a4d0-4451-945f-8fd2da5d267a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                LastKnownName="Boolean"
+                LastKnownLocation="ModelingProject1.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="8b468163-b82b-431d-ac86-a5d5d2899f17"
+            name="flagged"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="cfd9138c-4af1-45bb-accf-394cd51e2a7f"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Ftbell%2FSource%2FRepos%2FGame%2Fmine_sweeper%2Fbin%2FDebug%2Fmine_sweeper.exe Namespace%3Dmine_sweeper Type%3Dcell Member%3Dflagged"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="154af25a-f3d5-4059-9fae-b710d12f2b09"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fc16457a-2e66-4528-b6f5-d70744372885">
+                    <propertyInstance
+                      Id="aa9aa23a-3017-4478-a153-481e88dd8d8a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fed15b81-e556-4ad5-bf4b-d4d5c134ee0f">
+                    <propertyInstance
+                      Id="1eb2c10e-aa0b-4788-8da5-c330bd3e1802"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f62839c3-081b-4696-a27c-e3c938be110e">
+                    <propertyInstance
+                      Id="828352b4-4a9c-4fe4-a050-97b5a734effe"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f7a4ee24-393d-46f1-8940-cfee023f74c8">
+                    <propertyInstance
+                      Id="5d16caca-2c50-4a80-8174-4d228a423b81"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7f9f748d-6965-476a-b794-d4d902b69e38">
+                    <propertyInstance
+                      Id="2562191f-bc52-4f33-9d53-e79501d8d877"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                LastKnownName="Boolean"
+                LastKnownLocation="ModelingProject1.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="685945eb-4ea7-4951-a56f-39c758431fb4"
+            name="mine"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="e085f477-bc2d-4980-aa41-02d52497e2a5"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Ftbell%2FSource%2FRepos%2FGame%2Fmine_sweeper%2Fbin%2FDebug%2Fmine_sweeper.exe Namespace%3Dmine_sweeper Type%3Dcell Member%3Dmine"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="ce4f11d4-f8b5-4018-9a47-84474edd8335"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="89641114-8cce-47d5-a77d-09212f16b9cf">
+                    <propertyInstance
+                      Id="49a10bdb-8d86-44d3-82c5-8567e2ab7a81"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dde975a6-27dc-4d37-af89-7f756312c0a5">
+                    <propertyInstance
+                      Id="5cf3353b-825d-4df7-93b6-f56895ccb99e"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b9518b1c-5783-4947-b13a-cb1c3032c740">
+                    <propertyInstance
+                      Id="3fe5cfe5-3f18-42a8-9aad-e011415f455c"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="16dd7c2a-72d3-4a2e-a98b-4099f7e72e2a">
+                    <propertyInstance
+                      Id="a49e3a27-565d-4298-a6bc-f25916e63f7f"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="69dda15f-ae64-42f7-bf5d-53dc9887e99f">
+                    <propertyInstance
+                      Id="25d90da4-dd51-4fde-8186-69dc5593e57f"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                LastKnownName="Boolean"
+                LastKnownLocation="ModelingProject1.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="80d79d26-4e5f-4303-856c-68136a7aee19"
+            name="neighbors"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="0b1f0ab9-c094-4986-b4af-495db0d55541"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Ftbell%2FSource%2FRepos%2FGame%2Fmine_sweeper%2Fbin%2FDebug%2Fmine_sweeper.exe Namespace%3Dmine_sweeper Type%3Dcell Member%3Dneighbors"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="c72d7543-9f12-4095-8ca0-02d4013b1995"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d2a94781-6bb5-4aff-a0d4-366d89c14674">
+                    <propertyInstance
+                      Id="528475cd-7ce6-4804-ab57-3f4865ab45c8"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c7a18fa6-dc94-4e5d-8f91-bc04906ee823">
+                    <propertyInstance
+                      Id="c1058688-88c9-4dbe-a24d-b75de39e555a"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cf9b7e41-42ef-40d6-8376-a2012b2b0e62">
+                    <propertyInstance
+                      Id="c104cdf1-f992-40eb-b3e6-4babf761a748"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="da5ebe62-0e92-450e-ab04-73c28c9969de">
+                    <propertyInstance
+                      Id="aacfc111-2376-4c6a-88c0-6a73f3b92b81"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="766e3262-bd65-47fa-b718-ae5beb076c05">
+                    <propertyInstance
+                      Id="678ece11-bc99-4e55-b5e3-f340b2e57d38"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ModelingProject1.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="c333e627-dfba-4c7e-a56a-c34156d42331"
+            name="cell"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="ae8196d2-a08e-41b6-a32f-8ddb8f6d7675"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Ftbell%2FSource%2FRepos%2FGame%2Fmine_sweeper%2Fbin%2FDebug%2Fmine_sweeper.exe Namespace%3Dmine_sweeper Type%3Dcell Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d3c03b01-cafd-4e0b-9905-e26a73922e65"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b64ec0a7-016d-4903-90fe-ea6558da187a">
+                    <propertyInstance
+                      Id="839742e6-2955-491d-9ebb-1caed6cf7297"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="368df095-0901-4f09-be45-49938045f363">
+                    <propertyInstance
+                      Id="772f1009-0002-438c-afc1-6db0f6471ba0"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8317a52f-f60e-40ac-a98f-2a195c37dc4b">
+                    <propertyInstance
+                      Id="8176b8bb-332c-4386-bef5-1ced210fc47c"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="31e2524e-52d4-49d2-8b29-c86bcf60629c">
+                    <propertyInstance
+                      Id="15029aed-0eb4-407e-871d-0aa4574de345"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="afaae51a-3307-4ef2-bcd6-07888359538a">
+                    <propertyInstance
+                      Id="c615299d-7833-4587-bf62-af7737c1cad2"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="16700637-63cc-4835-9a35-a6769c2fbfb2">
+                    <propertyInstance
+                      Id="42593404-a519-472e-87c3-a1d2b887b5df"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="83251403-fc2e-427e-999c-4e51d5c80178"
+            name="getCovered"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="bca18303-d713-48a9-b87a-28e713201ebb"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Ftbell%2FSource%2FRepos%2FGame%2Fmine_sweeper%2Fbin%2FDebug%2Fmine_sweeper.exe Namespace%3Dmine_sweeper Type%3Dcell Member%3DgetCovered"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b822ecea-7eb4-4f3d-bc3d-1505e706afda"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f21c4be4-747a-46e8-95fe-6e38accdf540">
+                    <propertyInstance
+                      Id="8ee84b35-12a4-406d-9445-fca460621e1a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="020f3357-028f-4e2f-8d10-dcc08b65186f">
+                    <propertyInstance
+                      Id="9bb0a01c-a95e-41da-b9fe-f45880171a5f"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="665e860f-8fd6-418d-baac-3f36a9eb7154">
+                    <propertyInstance
+                      Id="1e71be6c-ec20-44b8-ab36-d3e4bf8b8c2a"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="67baaa31-7d38-478b-9cdb-77b0f2a7087e">
+                    <propertyInstance
+                      Id="85f721a6-4ed2-4bdd-ad68-a3830cf167d7"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cbc05651-1f51-4292-a648-071451f9f0fa">
+                    <propertyInstance
+                      Id="10fcdcb0-1a93-4197-b0c7-a1b421d78131"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="908b0af4-d793-4450-9e1c-8d9f4efe09c8">
+                    <propertyInstance
+                      Id="657b045e-5101-45bd-aa0e-3cc807df0ff2"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="db8c9a8d-0c8d-4cfb-b72f-6e4cc221d47e"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="3741ab4d-9631-48f3-8249-50df8aa8aa4f"
+            name="getFlagged"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="0673f85a-60d1-47f9-9061-1d215aa50088"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Ftbell%2FSource%2FRepos%2FGame%2Fmine_sweeper%2Fbin%2FDebug%2Fmine_sweeper.exe Namespace%3Dmine_sweeper Type%3Dcell Member%3DgetFlagged"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="fbf7de12-b03a-4e0d-8fa6-fba34d527ccf"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d1e7353f-017b-44ef-84aa-f96df693c887">
+                    <propertyInstance
+                      Id="c7f1287e-ca63-466f-b55d-08251b427f8d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="65f1f116-9c23-402f-97ea-1bb91d5e3e4f">
+                    <propertyInstance
+                      Id="3612bf6c-9cca-4a2b-b5ca-f0cd798613a3"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d63cf4a4-b082-4cb5-a26f-5377212b6692">
+                    <propertyInstance
+                      Id="12d13488-918e-475e-aca2-e42ca26bd6f1"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2100cd8f-45f3-43f7-8f7e-b69a1dd8d4f5">
+                    <propertyInstance
+                      Id="af94a193-e549-4716-8910-52ea0ed0c11a"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="96fe5f92-0752-4940-b5d4-3cf571cf72c2">
+                    <propertyInstance
+                      Id="e08b57b3-d74b-4ba0-8c9e-546cfc21b306"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9b01188f-9adc-4bf4-8ca9-51a06d8b0758">
+                    <propertyInstance
+                      Id="688e0182-1b2d-469f-b12e-fbd603ca5391"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5b19ef22-c7bb-411d-8524-b0c9d894da83"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="ab257b85-25e6-4bdf-9941-92e9a58b3992"
+            name="getMined"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="a9ad3a2f-2a8f-425f-b923-b30bfb3135e0"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Ftbell%2FSource%2FRepos%2FGame%2Fmine_sweeper%2Fbin%2FDebug%2Fmine_sweeper.exe Namespace%3Dmine_sweeper Type%3Dcell Member%3DgetMined"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b9ebce26-af01-418e-aa9d-d22ab0fdfaa3"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dc1d6a73-4bb9-4bbd-8157-e19056db071e">
+                    <propertyInstance
+                      Id="aebdc98c-7c32-4456-ad74-b6ffb5c197ab"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dc335a83-5821-4406-9614-010fbcff388b">
+                    <propertyInstance
+                      Id="05248996-6f3b-4f17-b541-066829ffa04f"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ad2040d5-7d88-4791-b281-cdf5b68711a0">
+                    <propertyInstance
+                      Id="e30f6cfd-bfc0-42a2-8f3e-90b180ef2557"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="be4c39fe-2146-4739-b38c-37481acd52c7">
+                    <propertyInstance
+                      Id="494c4190-6b1e-4f84-a98d-c38cda143c31"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="19eeaf56-56d0-4a0e-a2b8-8895ee50c445">
+                    <propertyInstance
+                      Id="e293ebae-f784-4e9a-9861-c0cff8470d40"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9cc51256-40ac-4e00-a738-4d64118bf507">
+                    <propertyInstance
+                      Id="99e55154-7b5a-4341-8c23-b0a6f3aec29f"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a723509b-3883-466b-ace6-5c9742ee4a26"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="e761fe1c-a83b-4358-926c-c0dbcd13e0e5"
+            name="getNeighbors"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="299dd5dd-481e-42a5-b8ec-b703317ffb51"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Ftbell%2FSource%2FRepos%2FGame%2Fmine_sweeper%2Fbin%2FDebug%2Fmine_sweeper.exe Namespace%3Dmine_sweeper Type%3Dcell Member%3DgetNeighbors"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="83f26982-bda5-4eaa-a582-3307c5674c34"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7e767ed5-0800-45f6-b05b-6bcee3d59206">
+                    <propertyInstance
+                      Id="3858ad3d-6785-4280-9bd7-032fa5de7aa7"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8c442626-e178-478a-b1ab-f4c3782d1e2b">
+                    <propertyInstance
+                      Id="2adb1b12-324b-43ee-83e2-b9db76a6ab53"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="402ebc05-0f87-41cb-bbb4-f845ac745b94">
+                    <propertyInstance
+                      Id="7ee21327-12e7-490c-85a4-60454b6ca189"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2a3e2ce9-8421-43fa-9d9a-5209427d5fe1">
+                    <propertyInstance
+                      Id="163039ad-740c-40a0-8631-173e137c0fc7"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="563706a6-cfad-48a8-8772-0266b280254c">
+                    <propertyInstance
+                      Id="aa07cd24-ddfd-472b-b18c-49fee95564a8"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2bbfe0c5-75f7-440a-b106-47b34661b84b">
+                    <propertyInstance
+                      Id="cfebd8d4-a897-4a55-ac95-7b4205bc51bd"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f42cfd1a-6a87-46ba-bcdc-7faa80d78354"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="73a17d4f-5c5f-40be-9e12-d01cdba01214"
+            name="setFlagged"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="a6f702e9-a5b0-4043-a302-d17825533f94"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Ftbell%2FSource%2FRepos%2FGame%2Fmine_sweeper%2Fbin%2FDebug%2Fmine_sweeper.exe Namespace%3Dmine_sweeper Type%3Dcell Member%3DsetFlagged"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="8fd0337d-7d58-46f6-888c-30ff3cdaced0"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1050a004-0eec-481e-9286-6a46638f5637">
+                    <propertyInstance
+                      Id="c1230336-fd52-47ef-aff7-6bd0a8eb3eaf"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3e08af49-726f-4945-bc93-690c7f2f99c0">
+                    <propertyInstance
+                      Id="99b57605-ccf9-4e2b-9ed8-fc8e55b9d649"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="701ae8f6-bb6b-448b-beb3-fac89faf7641">
+                    <propertyInstance
+                      Id="7fbb6ea5-9699-4715-b710-bf12f9b59827"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c3a83767-63b7-47c7-b939-e85016226bea">
+                    <propertyInstance
+                      Id="00941bc2-ef3a-4ede-88fb-9371cf90a959"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fec41a77-e461-4b6b-bffe-ad81ff1de082">
+                    <propertyInstance
+                      Id="9403a782-933d-4b81-979e-207643685012"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9579a458-bab2-4cd0-859c-6cedccda84e9">
+                    <propertyInstance
+                      Id="d86d165b-1502-44a9-b226-066f06cb3f8c"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="4d9bc31d-fc40-4138-9fc5-c852b65f79a2"
+            name="setMined"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="8b1141ec-1322-47ca-93f4-0a9ca50289dc"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Ftbell%2FSource%2FRepos%2FGame%2Fmine_sweeper%2Fbin%2FDebug%2Fmine_sweeper.exe Namespace%3Dmine_sweeper Type%3Dcell Member%3DsetMined"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="5c41c31e-1e74-4d42-a2f8-195dd3780901"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0afe914f-21ab-42e5-a658-46b2bad65334">
+                    <propertyInstance
+                      Id="5bbfc8fd-025a-4e21-b9a8-1f4607411244"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="715e3820-ca60-49e2-a840-bdd4b3de4dc7">
+                    <propertyInstance
+                      Id="5f8842cc-9322-443b-a3ac-64f109a5ae05"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="829262dd-f7cf-404c-8ac2-10ff60197068">
+                    <propertyInstance
+                      Id="d024c216-5127-4826-81ac-25ac1a9856e5"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2148bfb7-29c7-487d-9006-c835e559d71d">
+                    <propertyInstance
+                      Id="2761c979-4c14-408d-92b2-c1b4d5dc7463"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f395277d-d3f8-4e40-9172-4aaf8756a156">
+                    <propertyInstance
+                      Id="934083f0-37e4-45c0-9ae2-a1417e24d1fc"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c33cd507-f497-42b0-938c-e0e8838ed2bc">
+                    <propertyInstance
+                      Id="3c628359-07b4-48ce-830f-17aa3e86a499"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="27df7ba1-1af8-4749-8bf6-3d05191dd5e4"
+            name="setNeighbors"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="f8ad80ed-faeb-452c-b0f4-784b1388f322"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Ftbell%2FSource%2FRepos%2FGame%2Fmine_sweeper%2Fbin%2FDebug%2Fmine_sweeper.exe Namespace%3Dmine_sweeper Type%3Dcell Member%3DsetNeighbors"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="ec8f3fb2-b046-4e3a-826a-9696cfe92200"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9709ea4c-7bd0-443a-94e2-43fe7591ab44">
+                    <propertyInstance
+                      Id="c7b978c2-8ef2-4ed3-91a8-404e71ad4a13"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ac2896f2-bacf-4857-a3a5-4659de2dde1c">
+                    <propertyInstance
+                      Id="3f733272-f94f-4699-99ee-8ac8b764ae34"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6ff286ac-6133-45d4-a68b-dd18f65e8083">
+                    <propertyInstance
+                      Id="07a98cd0-c397-4955-b652-b8ec64631368"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c190e5ed-8c22-4d3f-8ba4-dc65da26488e">
+                    <propertyInstance
+                      Id="3481b072-aeb8-4164-b8e9-6f4581e3f528"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6444340f-9531-442e-9d94-5d267e81aa8f">
+                    <propertyInstance
+                      Id="ec43d075-6298-4f42-be30-7734d9e6eb07"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ea3c7968-e9db-4125-9854-964856c75af2">
+                    <propertyInstance
+                      Id="089916e6-7afc-4610-bfc7-7b4aa54a2d23"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="f0a93b23-49aa-4dbf-ac75-fc739404ec88"
+            name="setUncovered"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="727ce13b-d157-46f0-b807-79ff612c6052"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Ftbell%2FSource%2FRepos%2FGame%2Fmine_sweeper%2Fbin%2FDebug%2Fmine_sweeper.exe Namespace%3Dmine_sweeper Type%3Dcell Member%3DsetUncovered"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="6c4ca114-fea8-45fc-89c3-05a0ba805b5e"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="cd0e3581-23f8-4f28-97da-be679a7ee73a">
+                    <propertyInstance
+                      Id="17d42e10-ca22-4740-81b8-95222a284f27"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e70ef227-aae1-40b2-8240-38487536da17">
+                    <propertyInstance
+                      Id="29336681-654f-4645-8abd-7e3df88fa107"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3fed7806-afc3-486f-aa34-0d069fdbfa2f">
+                    <propertyInstance
+                      Id="a4bf44cb-ed10-45e6-b772-26507416bab0"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4d201cbe-e5eb-43e4-b7ec-f762ad4eb762">
+                    <propertyInstance
+                      Id="d24dcd45-908b-4e21-8221-349c1404262b"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="46f294c5-9719-4b5c-940f-a5c3b7dabd22">
+                    <propertyInstance
+                      Id="e7fad630-1201-4e84-a78f-16abc8086504"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="532d4fc9-30c3-48e6-a3a9-2201e730baa5">
+                    <propertyInstance
+                      Id="3f3986e9-0e61-4f6b-aba3-73bfa475a8d9"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="00f73ecb-e9ab-49ba-9772-ca840b5ba8c4"
+        name="minesweeper"
+        visibility="Package"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="94dc48b9-2233-49c4-965e-8756bee01633"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Ftbell%2FSource%2FRepos%2FGame%2Fmine_sweeper%2Fbin%2FDebug%2Fmine_sweeper.exe Namespace%3Dmine_sweeper Type%3Dminesweeper"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="013bea38-a8e3-453a-a6c1-7c8980592c8d"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3bcf6bcc-88e4-4598-af27-505a11eaa729">
+                <propertyInstance
+                  Id="e0a9cbdb-32ec-4ea9-94de-56547b024812"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="433bf943-745e-4900-8550-13d75c905802">
+                <propertyInstance
+                  Id="42a1562e-26e1-4778-9bb9-1c3174005c40"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="5eff336a-53d8-4540-a071-ae910212c9eb">
+                <propertyInstance
+                  Id="b3bdab95-b062-49c2-88e8-d063a3f81c9d"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7d403896-56c4-4df6-85b9-d2b46dec7918">
+                <propertyInstance
+                  Id="32321897-35c0-425e-9036-d7b01ccbbf80"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4b38eb01-916e-4f91-888f-49bfa53af17a">
+                <propertyInstance
+                  Id="fd520d36-131c-494b-b11d-53d28578549c"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="e8d42fdf-1c9d-40dc-982a-3e0655f4d829"
+            isDerived="false"
+            sourceEndRoleName="minesweeper"
+            targetEndRoleName="cell"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="c5dfd3f5-aaca-4ce9-a6f0-6502a0fb75c5"
+              LastKnownName="cell"
+              LastKnownLocation="Package_2322.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a01e5d7a-20ad-4c35-b695-c8d2bd26944d"
+                  name="minesweeper"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cd83e418-d46e-4c75-b8db-8ed85d85ad94"
+                  name="cell"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="5458f0a0-5dce-49de-bdde-ee8906e73f43"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="a906489e-eea0-4165-a6ed-5b85412107a6"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="5b3e4cd4-d423-4607-862f-ccd49c6e7c19"
+            name="grid"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isOrdered="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="31cb05df-639c-45a5-b21c-15417b7686e4"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Ftbell%2FSource%2FRepos%2FGame%2Fmine_sweeper%2Fbin%2FDebug%2Fmine_sweeper.exe Namespace%3Dmine_sweeper Type%3Dminesweeper Member%3Dgrid"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="14cfe4df-1647-42ed-8645-e1690ceefac8"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0ab6280a-9f20-4310-9577-59d71bc278c0">
+                    <propertyInstance
+                      Id="1d3333db-ac21-4320-842f-991833a6f5db"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fb78661f-c056-476e-8bc9-9f5a882bf693">
+                    <propertyInstance
+                      Id="ec9899a7-26ca-407e-8c87-5a56f4fffa59"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4da9e2de-2c89-403b-a83b-235cd98508ab">
+                    <propertyInstance
+                      Id="cd033346-d6f8-458e-99b6-423196244a4b"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="27deadf3-1940-4254-b406-7c8cc2c32c50">
+                    <propertyInstance
+                      Id="90af9ad0-7592-4554-bb41-9f037d33bfae"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a0b20a3d-5e69-4834-b562-8d2b9c77c8c8">
+                    <propertyInstance
+                      Id="682f7dad-7a70-4a54-8eb6-73d1c2fa83ba"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <lowerValueInternal>
+              <literalString
+                Id="2813b274-c242-47d1-bc95-f68f8ab02203"
+                name="Lower"
+                value="*" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="9690cad9-833f-4d00-a7a1-cd18f085120f"
+                name="Upper"
+                value="*" />
+            </upperValueInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="c5dfd3f5-aaca-4ce9-a6f0-6502a0fb75c5"
+                LastKnownName="cell"
+                LastKnownLocation="Package_2322.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="a2998db7-0e8b-4399-91b0-e6c80f13ceff"
+            name="mines"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="b062d1ec-2ff2-4783-9ac7-e906ad22cf7f"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Ftbell%2FSource%2FRepos%2FGame%2Fmine_sweeper%2Fbin%2FDebug%2Fmine_sweeper.exe Namespace%3Dmine_sweeper Type%3Dminesweeper Member%3Dmines"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="f5444c7d-2029-4cc4-ad96-3cba04ecbf97"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="872a83f9-c87c-44eb-bb0f-7754e990aca7">
+                    <propertyInstance
+                      Id="17815975-7377-4fa8-b356-122357aca7b4"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c61135ce-ff29-4365-898f-dc9a3e5edcee">
+                    <propertyInstance
+                      Id="ca458fcc-06e0-4c60-951c-24ab74ddac04"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c65bd0c6-c9df-44fb-ae98-8f1669c1a90f">
+                    <propertyInstance
+                      Id="466795ce-f17c-41d4-ac58-1990c6542fd5"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="89c756a8-404e-42d1-923b-ae0710a39954">
+                    <propertyInstance
+                      Id="6f97d685-9200-4a82-bd3e-d3d253076b93"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fde01aef-eefc-41d0-ba4f-7af5405fb76e">
+                    <propertyInstance
+                      Id="678b90aa-553d-4d39-a6fa-77ddd1a936ec"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ModelingProject1.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="f34bb096-75c3-46ee-afa1-3608df9f9dce"
+            name="size"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="6970423f-8a66-4910-a031-04573bb6fd43"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Ftbell%2FSource%2FRepos%2FGame%2Fmine_sweeper%2Fbin%2FDebug%2Fmine_sweeper.exe Namespace%3Dmine_sweeper Type%3Dminesweeper Member%3Dsize"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d12111db-1d81-46eb-bd57-0cf9214b6c19"
+                name="field"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5ba5b19e-df0e-4e06-b2fe-da8ca92377ea">
+                    <propertyInstance
+                      Id="b94302c2-fed5-4885-9f42-267ff0727419"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9b307848-10bd-4e4d-876a-090472222464">
+                    <propertyInstance
+                      Id="381364bd-408e-4c4d-af36-a3d857c71d5f"
+                      name="IsConst"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3cd4f908-a669-45a2-8c95-f3732a688f95">
+                    <propertyInstance
+                      Id="c0082621-87ea-4500-894a-ddcb0d8d89fa"
+                      name="IsNullable"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="96db5005-7dec-4868-93bd-134f173f5c4f">
+                    <propertyInstance
+                      Id="50917641-6d81-40c9-843f-e938ae915086"
+                      name="IsVolatile"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e2059b2a-c4ec-4ded-88a3-4cb88baa467c">
+                    <propertyInstance
+                      Id="6134b90a-8ede-4510-8b44-0525739621bd"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                LastKnownName="Integer"
+                LastKnownLocation="ModelingProject1.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="e5d73689-4447-4ef3-bae6-c2dda46ad6eb"
+            name="minesweeper"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="335e09be-fbea-4f36-86db-09dfa4299c39"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Ftbell%2FSource%2FRepos%2FGame%2Fmine_sweeper%2Fbin%2FDebug%2Fmine_sweeper.exe Namespace%3Dmine_sweeper Type%3Dminesweeper Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="6bf15766-5bb3-400e-a19d-e1476c323e67"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="da60320c-d337-4a47-af85-53c1fd27bbfd">
+                    <propertyInstance
+                      Id="8f1b2c41-76c7-4a4a-b8c8-e05aeacfccc8"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="609f450d-be66-4d67-be30-ae432fc4c570">
+                    <propertyInstance
+                      Id="15dfee71-5855-40d2-80e4-4449eb8fcd3c"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="36868382-a132-402c-bed4-bb720831ed50">
+                    <propertyInstance
+                      Id="83fff7fb-2b3b-43f7-8dd2-02b6e422b9e3"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="39321df3-e096-4fb5-a2ba-48facd85dd44">
+                    <propertyInstance
+                      Id="9440c557-5a95-4e18-90cb-bab4e09a1422"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="71b2b339-56cb-4926-b117-bbb8764695b2">
+                    <propertyInstance
+                      Id="8323ef6e-02aa-4a74-b067-d245e452b843"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8d553e5d-c48c-4c46-b33c-9aaac977e0fd">
+                    <propertyInstance
+                      Id="417a4f9c-82c8-4399-98b8-c585543d0150"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="aebd2b22-b20f-4073-b724-78b09cabbe07"
+                  name="size"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="023bb8c9-64f7-4809-8d18-9472305d93f2"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Ftbell%2FSource%2FRepos%2FGame%2Fmine_sweeper%2Fbin%2FDebug%2Fmine_sweeper.exe Namespace%3Dmine_sweeper Type%3Dminesweeper Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Dsize"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="433266f9-b50e-4bbc-a214-89857f48bf31"
+                  name="mines"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="c072956a-9e1a-4caa-a324-62f720755e06"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Ftbell%2FSource%2FRepos%2FGame%2Fmine_sweeper%2Fbin%2FDebug%2Fmine_sweeper.exe Namespace%3Dmine_sweeper Type%3Dminesweeper Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Dmines"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="afd1b290-7600-4edb-afeb-2d2ad8d146d4"
+            name="flagCell"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="87e5a920-52d4-49cb-8983-997b7d152583"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Ftbell%2FSource%2FRepos%2FGame%2Fmine_sweeper%2Fbin%2FDebug%2Fmine_sweeper.exe Namespace%3Dmine_sweeper Type%3Dminesweeper Member%3D(Name%3DflagCell OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="cbf87d6e-2fca-40c8-81f1-fc6d543a9f97"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="caee661f-0218-45e3-bb62-9864099f39d6">
+                    <propertyInstance
+                      Id="3461779f-8b12-4fb4-a682-a37feaaf7f5a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d7dc1f9a-f6ad-479d-b3dd-38f8ad715639">
+                    <propertyInstance
+                      Id="674a8562-b6be-4438-9720-04523b3ee0de"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="16daf553-83e7-47e0-8dd7-2275e12d4eb3">
+                    <propertyInstance
+                      Id="bb94c160-a4a4-4f6a-b109-e96810696cf1"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="207ea699-78cf-431a-86cb-34d78e5f1333">
+                    <propertyInstance
+                      Id="eeea4beb-ac8c-4e85-aa8d-eec6dde25770"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="271e00fd-1493-4af4-9ceb-6a27f960b55e">
+                    <propertyInstance
+                      Id="9e811674-f3d1-41b6-8b7d-f2285e668fad"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c94bce35-2e0a-4da6-8f2d-c0f5b4f26a2f">
+                    <propertyInstance
+                      Id="99e098a7-0f40-4e66-9bd2-3707f092cfd7"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="63be6d8e-59d2-4f53-a61a-38870e7d5c2c"
+                  name="x"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="9f06ae84-6dcb-41cf-bc67-8e32d995b9f9"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Ftbell%2FSource%2FRepos%2FGame%2Fmine_sweeper%2Fbin%2FDebug%2Fmine_sweeper.exe Namespace%3Dmine_sweeper Type%3Dminesweeper Member%3D(Name%3DflagCell OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Dx"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1fa47e90-53e9-465f-801e-f9262ce4c137"
+                  name="y"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="06c70732-04b6-4d9b-bb0a-bd0c3b1a5e7c"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Ftbell%2FSource%2FRepos%2FGame%2Fmine_sweeper%2Fbin%2FDebug%2Fmine_sweeper.exe Namespace%3Dmine_sweeper Type%3Dminesweeper Member%3D(Name%3DflagCell OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Dy"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="dfaee04f-2e1d-48bc-85c4-d3dde730cec8"
+            name="makeMove"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="43cf346a-0cd1-4a5a-82eb-87fde794b1ac"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Ftbell%2FSource%2FRepos%2FGame%2Fmine_sweeper%2Fbin%2FDebug%2Fmine_sweeper.exe Namespace%3Dmine_sweeper Type%3Dminesweeper Member%3D(Name%3DmakeMove OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="113a0227-66be-4c9d-9776-d69e03e830d0"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a28a0ae5-13ee-4287-a087-0ebcfef5cdc8">
+                    <propertyInstance
+                      Id="24c0cf4c-d931-42a5-8230-f0010b66fd38"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d71828bc-07cc-4e0e-abca-76759324da08">
+                    <propertyInstance
+                      Id="5ea0f852-76fe-457b-ae96-5c6b867f2157"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ff73290b-2016-4942-8901-4ca77376cf2f">
+                    <propertyInstance
+                      Id="33d94130-d9c1-4959-a422-e3e8f7ee055e"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e83684fa-78fb-4477-baa1-67280c54c5d9">
+                    <propertyInstance
+                      Id="a7910113-0176-4054-9190-9a09d42e3114"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f8ff1929-6bf1-4301-aad1-a2fc3b0b8416">
+                    <propertyInstance
+                      Id="8fd59e16-77e7-4d24-9f3e-d0c6be92a39f"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b107359c-48ea-441e-879c-ff043b87890c">
+                    <propertyInstance
+                      Id="d9c99c88-a02d-4b19-9866-ac6c4939f10b"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7bd82bbf-9aa0-49a0-81c1-a76beba41284"
+                  name="x"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="971f5430-0e41-4d72-9d58-b8ac3f7b638b"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Ftbell%2FSource%2FRepos%2FGame%2Fmine_sweeper%2Fbin%2FDebug%2Fmine_sweeper.exe Namespace%3Dmine_sweeper Type%3Dminesweeper Member%3D(Name%3DmakeMove OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Dx"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="6bf41b0f-55d4-420a-b641-bfafb07fe231"
+                  name="y"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="c8b0c93a-ac6a-480c-a53d-3e47313502ae"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Ftbell%2FSource%2FRepos%2FGame%2Fmine_sweeper%2Fbin%2FDebug%2Fmine_sweeper.exe Namespace%3Dmine_sweeper Type%3Dminesweeper Member%3D(Name%3DmakeMove OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DInt32)]) ParameterIdentifier%3Dy"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="220a3521-e091-4221-bae9-3ef9018e845c"
+                      LastKnownName="Integer"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="edaa7fe3-3a6f-46c8-9365-2d929744dde0"
+            name="drawField"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="49a35b0d-a217-4a47-a23a-2d34b3d8d587"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Ftbell%2FSource%2FRepos%2FGame%2Fmine_sweeper%2Fbin%2FDebug%2Fmine_sweeper.exe Namespace%3Dmine_sweeper Type%3Dminesweeper Member%3DdrawField"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1d72d941-6066-489d-afbc-a4aaf92efa67"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5e90edd0-391a-4491-8b4c-04e8a6748720">
+                    <propertyInstance
+                      Id="98617609-9062-4116-9761-c6f3af6dc511"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7817e1df-7937-404e-9eb2-757a11f62748">
+                    <propertyInstance
+                      Id="9a6ea708-9d41-4567-8abf-df35c7f9f840"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4798ef87-14dc-40a2-b144-c3035d5aa5d4">
+                    <propertyInstance
+                      Id="446833cb-0feb-46fe-97e5-93037cff682d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="301b0317-054e-4c9f-82bc-769325196763">
+                    <propertyInstance
+                      Id="7d691e86-52a8-41de-9183-f5d8b33059c1"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a449b49b-b929-4d2e-bc28-49557fdb528e">
+                    <propertyInstance
+                      Id="446a9d58-181d-4627-8e5b-da2d3197c7af"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="0be47342-2d84-4b14-8fa3-82460609d6fc">
+                    <propertyInstance
+                      Id="f7fd92b4-afd9-4a12-9508-54cbd660573c"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="fb30cfb6-4011-418f-946e-1e93438df038"
+            name="drawGame"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="7ad09f86-35de-4f3b-96f0-95b67e3d230a"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Ftbell%2FSource%2FRepos%2FGame%2Fmine_sweeper%2Fbin%2FDebug%2Fmine_sweeper.exe Namespace%3Dmine_sweeper Type%3Dminesweeper Member%3DdrawGame"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="1492b073-0d25-49e0-9a41-804b2037a2b8"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4ae077b0-ff5d-4e44-949f-304a0a9cac16">
+                    <propertyInstance
+                      Id="52adec5a-8e6b-4aa6-8907-20906cc21cb8"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="31c49a4a-5011-4ddd-9745-d4457bafcd57">
+                    <propertyInstance
+                      Id="7834a749-48c7-4227-a6db-7028d6a044e7"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7810ca2a-a5e3-452f-adf5-92bac023a5b7">
+                    <propertyInstance
+                      Id="ec674fa5-a875-4749-a076-ad22c91a528f"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f72bd7b0-baab-4cd3-8754-f5ed430f3bf6">
+                    <propertyInstance
+                      Id="5a516623-3bc8-4c39-82a5-746a1f30b524"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c834110b-8daa-47b5-9a03-c54bbc9c64ec">
+                    <propertyInstance
+                      Id="e36c0662-b638-4dd9-9879-dd0556b69a1d"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b5c3d9a6-9a60-41b1-982d-760ebe439be5">
+                    <propertyInstance
+                      Id="27dbaca9-1a56-41cf-bfac-1e32d19f7cca"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="08fb5501-8ff5-4c56-8582-168f7d76c0af"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="b2ab38a8-fa6a-4fcd-92cc-a6646d87750c"
+            name="gameLost"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="5d8f3e90-038f-4525-af28-f5f35aed48cb"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Ftbell%2FSource%2FRepos%2FGame%2Fmine_sweeper%2Fbin%2FDebug%2Fmine_sweeper.exe Namespace%3Dmine_sweeper Type%3Dminesweeper Member%3DgameLost"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a7cdaa4e-5a99-4718-8263-23d086e07a5d"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6195b8dd-cc23-46ce-a258-b4aac5b27add">
+                    <propertyInstance
+                      Id="ff587acd-a612-4e92-be33-ffa9736296bb"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9c4f4d20-fa9c-4a46-8ba5-e868b8199f93">
+                    <propertyInstance
+                      Id="b78b5757-e0ae-4e24-b963-01b13f5e42f1"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c6a14d77-dc88-4fcc-b194-96d21617520e">
+                    <propertyInstance
+                      Id="5f707fb4-d4dd-4d4c-9c48-5d24a47cf75d"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6f9d2674-3367-44b2-bd94-3c34aca8b888">
+                    <propertyInstance
+                      Id="ea505aa9-0648-4732-8c0e-0f723f0b3359"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="760479a2-08d5-448d-b622-cfb2beaf3339">
+                    <propertyInstance
+                      Id="e130dd3c-f6e6-4987-a808-05e79fb30175"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8d19af47-08e9-483b-90fc-2decb0324177">
+                    <propertyInstance
+                      Id="20023a89-ca9a-499c-aac2-28b14d9c7f2f"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5eb7e08c-a693-436f-8310-a7dddc2c2a62"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="d6eec0b2-afd9-47b8-b745-c687f3d1fc03"
+            name="gameWon"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="2d2f508c-546d-4121-8e42-654d6f5ef2c8"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Ftbell%2FSource%2FRepos%2FGame%2Fmine_sweeper%2Fbin%2FDebug%2Fmine_sweeper.exe Namespace%3Dmine_sweeper Type%3Dminesweeper Member%3DgameWon"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="af52c700-601c-4410-80f5-67ba6263df7f"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2e42a2a1-0a01-47a4-b31d-82c7f16beca3">
+                    <propertyInstance
+                      Id="3bf0dec2-34cb-4e6e-97e2-ed9528218569"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="05b3962d-32e9-4af7-8af6-fca2ba53dc62">
+                    <propertyInstance
+                      Id="d19e4c81-9eea-4e05-976d-ba445d2c03e3"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="30f5a10b-a365-4ec8-b9da-e752226ce1a7">
+                    <propertyInstance
+                      Id="db3a8d23-c60e-4b71-89b3-13c10d795d03"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ac8de9e2-751b-40c0-94dd-5458201882d1">
+                    <propertyInstance
+                      Id="90138fd1-3f57-4464-b961-48e4d9211fef"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5d30a92e-b579-4780-b180-473d8c69b550">
+                    <propertyInstance
+                      Id="6453f306-7f8c-4408-9c15-158397c78482"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5773318b-c9e6-4c04-bd6c-a6697636c4be">
+                    <propertyInstance
+                      Id="50ed9446-460d-44dd-8854-b963bedbbdc5"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="515784ef-0931-4018-92bb-88f6f47b9394"
+                  direction="Return">
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+                      LastKnownName="Boolean"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="3f51c89d-6a21-4c3a-9789-4042e36c910e"
+            name="mineTheField"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="774dcf44-7b52-4fbe-af46-45b161f51257"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2Ftbell%2FSource%2FRepos%2FGame%2Fmine_sweeper%2Fbin%2FDebug%2Fmine_sweeper.exe Namespace%3Dmine_sweeper Type%3Dminesweeper Member%3DmineTheField"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="45b7b2b9-922e-4446-8ec4-4a5815745674"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a59450ed-ac98-4bbf-908e-e8377094f65f">
+                    <propertyInstance
+                      Id="5961c146-cbde-4a09-aa0a-3ba5b275fec5"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f7aca660-085d-400a-932a-34649fc221c4">
+                    <propertyInstance
+                      Id="634041ca-4096-47b2-b6f3-7ef7d86fc3b8"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6588f432-7475-4143-a555-017ad44f5c21">
+                    <propertyInstance
+                      Id="5c79e6d2-26ff-42b1-a400-4572783c9b62"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c25808df-9c76-4315-9fbd-bc17bc489257">
+                    <propertyInstance
+                      Id="f1103e34-8e30-41fe-8b76-53f501b4eaef"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="42aefd1a-5906-4c5c-95ed-03f274e6e9ab">
+                    <propertyInstance
+                      Id="a9cd1708-1c1a-4d71-a36c-508df0cbdf20"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e16d9f37-b25d-45c4-a1aa-7bd1df1c5e9d">
+                    <propertyInstance
+                      Id="0b659e9a-93d9-4e41-8fe9-17e8af99605e"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

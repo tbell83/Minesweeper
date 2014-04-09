@@ -31,14 +31,28 @@ namespace mine_sweeper
         {
             int x = Convert.ToInt16(txtX.Text)-1;
             int y = Convert.ToInt16(txtY.Text)-1;
-            if (x > size || y > size){
+            if (x >= size || y >= size){
                 MessageBox.Show("Stop fucking up.");
-            }
-            if(!game.makeMove(x, y)) {
-                txtOuput.Text = game.drawGame();
             }else{
-                MessageBox.Show("Games over.");
+                game.makeMove(x, y);
+                txtOuput.Text = game.drawGame();
             }
+            txtX.Clear();
+            txtY.Clear();
+        }
+
+        private void btnFlag_Click(object sender, EventArgs e)
+        {
+            int x = Convert.ToInt16(txtX.Text) - 1;
+            int y = Convert.ToInt16(txtY.Text) - 1;
+            if (x >= size || y >= size){
+                MessageBox.Show("Stop fucking up.");
+            }else{
+                game.flagCell(x, y);
+                txtOuput.Text = game.drawGame();
+            }
+            txtX.Clear();
+            txtY.Clear();
         }
     }
 }

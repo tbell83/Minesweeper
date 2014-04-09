@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="95608ca7-6964-4b88-8abd-ae09952ada14" name="UMLUseCaseDiagram1" linkedPackageId="e1997bce-611b-4b04-91dd-02dd9b3f5d4d" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="413b9287-7a8b-4b7d-9d74-7286b390f032">
+      <profileInstance Id="4c412992-ad44-44a5-b02b-203f821bb0ef" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="a1c6294d-930a-4e2f-a542-0949da2aba1f">
+      <profileInstance Id="89dcae7e-9f7a-4464-914f-f80a4b736977" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="f9ffbdac-3853-4ede-8ac5-73aa07259ba5">
+      <profileInstance Id="9a8479e3-799f-4bd5-b3c2-1bac07ef9010" name="CSharpProfile">
+        <elementDefinition Id="3c8570e6-5d12-4745-b127-ae4b7914c440" />
+      </profileInstance>
+      <elementDefinition Id="e14d84ab-bc53-4cf6-8db8-f70a76a893ab" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="dffb9296-e359-4087-b81e-84186c4172ab" name="Actor1" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0bebe439-e211-408c-9312-8c0543608001" />
+        <targetEnds>
+          <association Id="bac4bf4e-d3f6-4cf3-a4e7-609b13ec4506" isDerived="false" sourceEndRoleName="Actor1" targetEndRoleName="uncovers cell" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="70b26db3-18e9-492d-9dd5-5633cf7bf536" LastKnownName="uncovers cell" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="df9eb8cb-a4c4-4ac2-9351-84476e92fac2" name="Actor1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="cecfb4ce-aadd-4386-a422-e4771e2858f1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c77a1e1f-2e00-4d0b-96c9-13274dc5085f" name="uncovers cell" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="83a7aec2-ad28-4cdf-8d87-07611a7f1043" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c40e5eb9-336b-48ef-b2b2-ca3b92c9375c" />
+          </association>
+          <association Id="077ba378-69f2-4006-a148-fa25941cc224" isDerived="false" sourceEndRoleName="Actor1" targetEndRoleName="flags cell" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="db7cb098-bd6f-4b99-9af2-32e54bc78add" LastKnownName="flags cell" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5080f4e8-9fc3-4917-8612-da9c3a9833d4" name="Actor1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="b47cf1ad-e0f7-409b-8257-965df749b475" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="71818e94-d116-4fb5-9c1d-591bacdfa78e" name="flags cell" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5c1ebc13-8fbb-4a60-97b4-8435aee267f5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="5e9efd9b-a00d-4eba-b750-54c13be25992" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="70b26db3-18e9-492d-9dd5-5633cf7bf536" name="uncovers cell" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="973821ae-ff16-4135-bb2e-7a56e1e88451" />
+        <subjects>
+          <subsystemMoniker Id="70d0c773-1837-42da-a371-53d1b5459c49" LastKnownName="minesweeper" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="db7cb098-bd6f-4b99-9af2-32e54bc78add" name="flags cell" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="8600711a-72bc-48b2-a589-09430b0908a9" />
+        <subjects>
+          <subsystemMoniker Id="70d0c773-1837-42da-a371-53d1b5459c49" LastKnownName="minesweeper" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="70d0c773-1837-42da-a371-53d1b5459c49" name="minesweeper" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="69389606-7930-4932-b34b-113fa063e22f" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="e1997bce-611b-4b04-91dd-02dd9b3f5d4d" name="ModelingProject1">
+    <elementDefinition Id="77a5bea6-5393-4f8e-a8bf-72c7bc1d5261" />
+  </package>
+</useCaseModelRoot>

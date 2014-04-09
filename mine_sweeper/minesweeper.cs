@@ -47,7 +47,7 @@ namespace mine_sweeper{
             foreach (int[] item in minePlacement){
                 int x = item[0];
                 int y = item[1];
-                grid[x, y].setMined(true);
+                grid[x, y].setMined();
                 if ((x == 0) && (y == 0)){
                     grid[x + 1, y].setNeighbors();
                     grid[x + 1, y + 1].setNeighbors();
@@ -106,6 +106,8 @@ namespace mine_sweeper{
                 for (int y = 0; y < size; y++) {
                     if (grid[x, y].getMined()){
                         Console.Write("X");
+                    }else if(grid[x,y].getFlagged()){
+                        Console.Write("F");
                     }else{
                         Console.Write(grid[x,y].getNeighbors());
                     }
@@ -118,8 +120,12 @@ namespace mine_sweeper{
             string output = "";
             for (int x = 0; x < size; x++) {
                 for (int y = 0; y < size; y++) {
-                    if (grid[x, y].getCovered()){
+                    if(grid[x,y].getFlagged()){
+                        output = output + "F ";
+                    }else if (grid[x, y].getCovered()){
                         output = output + "? ";
+                    }else if(grid[x,y].getMined()){
+                        output = output + "X ";
                     }else{
                         output = output + grid[x, y].getNeighbors() + " ";
                     }
@@ -129,12 +135,12 @@ namespace mine_sweeper{
             return output;
         }
 
-        public bool makeMove(int x, int y){
+        public void makeMove(int x, int y){
             grid[x, y].setUncovered();
-            if (gameWon()){
-                return true;
-            }
-            return false;
+        }
+
+        public void flagCell(int x, int y){
+            grid[x, y].setFlagged();
         }
 
         public bool gameWon(){
@@ -144,6 +150,15 @@ namespace mine_sweeper{
                 }
             }
             return true;
+        }
+
+        public bool gameLost(){
+            foreach (cell item in grid){
+                if (item.getMined() && !item.getCovered()) {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }
