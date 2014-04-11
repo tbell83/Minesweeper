@@ -137,6 +137,20 @@ namespace mine_sweeper{
             return output;
         }
 
+        public string drawCell(int x, int y){
+            string output = "";
+            if(grid[x,y].getFlagged()){
+                output = output + "F";
+            }else if (grid[x, y].getCovered()){
+                output = output + "";
+            }else if(grid[x,y].getMined()){
+                output = output + "X";
+            }else{
+                output = output + grid[x, y].getNeighbors();
+            }
+            return output;
+        }
+
         public void makeMove(int x, int y){
             grid[x, y].setUncovered();
             if (grid[x, y].getNeighbors() == 0){
