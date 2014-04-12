@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace mine_sweeper{
     public class minesweeper{
-        int size;
-        int mines;
-        cell[,] grid;
-        List<int[]> minePlacement;
+        private int size;
+        private int mines;
+        private cell[,] grid;
+        private List<int[]> minePlacement;
 
         public minesweeper(int size, int mines){
             this.size = size;
@@ -28,7 +28,7 @@ namespace mine_sweeper{
             mineTheField();
         }
 
-        public void mineTheField(){
+        private  void mineTheField(){
             Random rand = new Random();
             minePlacement = new List<int[]>();
             for (int i = 0; i < mines; i++) {
@@ -135,16 +135,21 @@ namespace mine_sweeper{
         }
 
         public void makeMove(int x, int y){
-            grid[x, y].setUncovered();
-            if (grid[x, y].getNeighbors() == 0){
-                for (int x2 = x-1; x2 < x+2; x2++){
-                    for (int y2 = y-1; y2 < y+2; y2++){
-                        if((x2 >= 0 && y2 >=0) && (x2 <= size-1 && y2 <= size-1) && grid[x2,y2].getCovered()){
-                            makeMove(x2, y2);
+            if(!grid[x,y].getFlagged()){
+                grid[x, y].setUncovered();
+                if (grid[x, y].getNeighbors() == 0){
+                    for (int x2 = x-1; x2 < x+2; x2++){
+                        for (int y2 = y-1; y2 < y+2; y2++){
+                            if((x2 >= 0 && y2 >=0) && (x2 <= size-1 && y2 <= size-1) && grid[x2,y2].getCovered()){
+                                makeMove(x2, y2);
+                            }
                         }
                     }
                 }
+            }else{
+                grid[x,y].setFlagged();
             }
+
         }
 
         public void flagCell(int x, int y){

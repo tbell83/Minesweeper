@@ -10,13 +10,15 @@ using System.Windows.Forms;
 
 namespace mine_sweeper{
     public partial class GUI_form : Form{
-        const int size = 10;
-        const int mines = 10;
-        int wins = 0;
-        int losses = 0;
-        Button[,] grid;
+        private const int size = 10;
+        private const int mines = 10;
+        private int wins = 0;
+        private int losses = 0;
+        private Button[,] grid;
+        private Bitmap flag = new Bitmap(mine_sweeper.Properties.Resources.flag, new Size(30,30));
+        private Bitmap mine = new Bitmap(mine_sweeper.Properties.Resources.mine, new Size(30, 30));
 
-        public minesweeper game = new minesweeper(size, mines);
+        minesweeper game = new minesweeper(size, mines);
 
         public GUI_form(){
             InitializeComponent();
@@ -38,6 +40,7 @@ namespace mine_sweeper{
         private void resetGame(object sender, EventArgs e){
             game.reset();
             game.drawField();
+            foreach (Button item in grid) { item.Enabled = true; }
             redraw();
         }
 
@@ -53,35 +56,41 @@ namespace mine_sweeper{
         private void redraw(){
             for(int x = 0;x < size;x++){
                 for(int y = 0;y < size;y++){
-                    grid[x, y].BackColor = Color.LightGray;
                     string text = game.drawCell(x,y);
-                    grid[x,y].Text = text;
                     if (text == "0") {
-                        grid[x, y].Text = "";
                         grid[x, y].BackColor = Color.Green;
                     }else if(text == "F"){
                         grid[x, y].BackColor = Color.Yellow;
+                        grid[x, y].BackgroundImage = flag;
                     }else if(text == "X"){
                         grid[x, y].BackColor = Color.Red;
+                        grid[x, y].BackgroundImage = mine;
+                    }else{
+                        grid[x, y].Text = text;
+                        grid[x, y].BackColor = Color.LightGray;
+                        grid[x, y].BackgroundImage = null;
                     }
                 }
             }
         }
 
-        public void gameOver(bool gameState){
+        private void gameOver(bool gameState){
             if (gameState){
                 wins++;
             }else{
                 losses++;
                 game.showMines();
                 redraw();
+                foreach (Button item in grid) { item.Enabled = false; }
             }
             End_of_Game eog = new End_of_Game(wins, losses, gameState);
-            eog.Show();
+            this.Enabled = false;
+            eog.ShowDialog(this);
+            this.Enabled = true;
             game.reset();
         }
 
-        public void generateGrid(){
+        private void generateGrid(){
             grid = new Button[size,size];
             for(int x = 0;x < size;x++){
                 for(int y = 0;y < size;y++){
@@ -99,7 +108,7 @@ namespace mine_sweeper{
             }
         }
 
-        public void cellClick(object sender, MouseEventArgs e){
+        private void cellClick(object sender, MouseEventArgs e){
             Button button = sender as Button;
             string[] coord = button.Tag.ToString().Split(',');
             int x = Convert.ToInt16(coord[0]);
