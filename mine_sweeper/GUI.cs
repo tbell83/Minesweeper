@@ -36,7 +36,8 @@ namespace mine_sweeper{
         }
 
         private void resetGame(object sender, EventArgs e){
-            game.mineTheField();
+            game.reset();
+            game.drawField();
             redraw();
         }
 
@@ -60,6 +61,8 @@ namespace mine_sweeper{
                         grid[x, y].BackColor = Color.Green;
                     }else if(text == "F"){
                         grid[x, y].BackColor = Color.Yellow;
+                    }else if(text == "X"){
+                        grid[x, y].BackColor = Color.Red;
                     }
                 }
             }
@@ -70,6 +73,8 @@ namespace mine_sweeper{
                 wins++;
             }else{
                 losses++;
+                game.showMines();
+                redraw();
             }
             End_of_Game eog = new End_of_Game(wins, losses, gameState);
             eog.Show();

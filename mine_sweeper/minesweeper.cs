@@ -9,6 +9,7 @@ namespace mine_sweeper{
         int size;
         int mines;
         cell[,] grid;
+        List<int[]> minePlacement;
 
         public minesweeper(int size, int mines){
             this.size = size;
@@ -29,7 +30,7 @@ namespace mine_sweeper{
 
         public void mineTheField(){
             Random rand = new Random();
-            List<int[]> minePlacement = new List<int[]>();
+            minePlacement = new List<int[]>();
             for (int i = 0; i < mines; i++) {
                 int[] plot = {rand.Next(0,size), rand.Next(0,size)};
                 minePlacement.Add(plot);
@@ -104,6 +105,7 @@ namespace mine_sweeper{
         }
 
         public void drawField(){
+            Console.WriteLine();
             for (int x = 0; x < size; x++) {
                 for (int y = 0; y < size; y++) {
                     if (grid[x, y].getMined()){
@@ -165,6 +167,14 @@ namespace mine_sweeper{
                 }
             }
             return false;
+        }
+
+        public void showMines(){
+            foreach (int[] item in minePlacement){
+                int x = item[0];
+                int y = item[1];
+                grid[x,y].setUncovered();
+            }
         }
     }
 }
