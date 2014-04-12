@@ -9,58 +9,40 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace mine_sweeper{
-    public partial class GUI : Form{
+    public partial class GUI_form : Form{
         const int size = 10;
-        const int mines = 2;
+        const int mines = 10;
         int wins = 0;
         int losses = 0;
+        Button[,] grid;
 
         public minesweeper game = new minesweeper(size, mines);
 
-        public GUI(){
+        public GUI_form(){
             InitializeComponent();
+            generateGrid();
+            Button reset = new Button();
+            reset.Size = new System.Drawing.Size(50, 30);
+            reset.Location = new Point(((size * 30) / 2)-25, (size*30)+5);
+            reset.Text = "Reset";
+            reset.Click += new EventHandler(resetGame);
+            this.Controls.Add(reset);
         }
 
         private void Form1_Load(object sender, EventArgs e){
             game.drawField();
-            txtOuput.Text = game.drawGame();
-            txtOuput.ReadOnly = true;
-            txtX.Select();
-            this.AcceptButton = btnSubmit;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Size = new System.Drawing.Size((size * 30) + 17, (size * 30) + 76);
         }
 
-        private void btnSubmit_Click(object sender, EventArgs e){
-            int x = Convert.ToInt16(txtX.Text)-1;
-            int y = Convert.ToInt16(txtY.Text)-1;
-            if (validatePlot(x,y)){
-                game.makeMove(x, y);
-            }
-            afterClick();
-        }
-
-        private void btnFlag_Click(object sender, EventArgs e){
-            int x = Convert.ToInt16(txtX.Text) - 1;
-            int y = Convert.ToInt16(txtY.Text) - 1;
-            if (validatePlot(x, y)){
-                game.flagCell(x, y);
-            }
-            afterClick();
-        }
-
-        private bool validatePlot(int x, int y){
-
-            if (x >= size || y >= size){
-                MessageBox.Show(String.Format("Please check that your input is between 1 and {0}.", size));
-                return false;
-            }else{
-                return true;
-            }
+        private void resetGame(object sender, EventArgs e){
+            game.reset();
+            game.drawField();
+            redraw();
         }
 
         private void afterClick(){
-            txtX.Clear();
-            txtY.Clear();
-            txtOuput.Text = game.drawGame();
+            redraw();
             if (game.gameWon()){
                 gameOver(true);
             }else if(game.gameLost()){
@@ -68,21 +50,66 @@ namespace mine_sweeper{
             }
         }
 
+        private void redraw(){
+            for(int x = 0;x < size;x++){
+                for(int y = 0;y < size;y++){
+                    grid[x, y].BackColor = Color.LightGray;
+                    string text = game.drawCell(x,y);
+                    grid[x,y].Text = text;
+                    if (text == "0") {
+                        grid[x, y].Text = "";
+                        grid[x, y].BackColor = Color.Green;
+                    }else if(text == "F"){
+                        grid[x, y].BackColor = Color.Yellow;
+                    }else if(text == "X"){
+                        grid[x, y].BackColor = Color.Red;
+                    }
+                }
+            }
+        }
+
         public void gameOver(bool gameState){
-            btnFlag.Enabled = false;
-            btnSubmit.Enabled = false;
-            txtOuput.Text = game.drawGame();
             if (gameState){
                 wins++;
             }else{
                 losses++;
+                game.showMines();
+                redraw();
             }
             End_of_Game eog = new End_of_Game(wins, losses, gameState);
             eog.Show();
             game.reset();
-            txtOuput.Text = game.drawGame();
-            btnFlag.Enabled = true;
-            btnSubmit.Enabled = true;
+        }
+
+        public void generateGrid(){
+            grid = new Button[size,size];
+            for(int x = 0;x < size;x++){
+                for(int y = 0;y < size;y++){
+                    Button button = new Button();
+                    button.Location = new Point(x*30,y*30);
+                    button.Size = new Size(30, 30);
+                    button.Tag = string.Format("{0},{1}", x, y);
+                    button.Text = game.drawCell(x, y);
+                    button.BackColor = Color.LightGray;
+                    button.FlatStyle = FlatStyle.Flat;
+                    grid[x, y] = button;
+                    button.MouseDown += new MouseEventHandler(cellClick);
+                    this.Controls.Add(button);
+                }
+            }
+        }
+
+        public void cellClick(object sender, MouseEventArgs e){
+            Button button = sender as Button;
+            string[] coord = button.Tag.ToString().Split(',');
+            int x = Convert.ToInt16(coord[0]);
+            int y = Convert.ToInt16(coord[1]);
+            if(e.Button == System.Windows.Forms.MouseButtons.Left){
+                game.makeMove(x, y);
+            }else if(e.Button == System.Windows.Forms.MouseButtons.Right){
+                game.flagCell(x, y);
+            }
+            afterClick();
         }
     }
 }
