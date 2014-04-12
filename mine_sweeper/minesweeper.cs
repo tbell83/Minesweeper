@@ -27,7 +27,7 @@ namespace mine_sweeper{
             mineTheField();
         }
 
-        private void mineTheField(){
+        public void mineTheField(){
             Random rand = new Random();
             List<int[]> minePlacement = new List<int[]>();
             for (int i = 0; i < mines; i++) {
@@ -118,25 +118,6 @@ namespace mine_sweeper{
             }
         }
 
-        public string drawGame(){
-            string output = "";
-            for (int x = 0; x < size; x++) {
-                for (int y = 0; y < size; y++) {
-                    if(grid[x,y].getFlagged()){
-                        output = output + "F  ";
-                    }else if (grid[x, y].getCovered()){
-                        output = output + "?  ";
-                    }else if(grid[x,y].getMined()){
-                        output = output + "X  ";
-                    }else{
-                        output = output + grid[x, y].getNeighbors() + "  ";
-                    }
-                }
-                output = output + "\r\n";
-            }
-            return output;
-        }
-
         public string drawCell(int x, int y){
             string output = "";
             if(grid[x,y].getFlagged()){
@@ -158,7 +139,6 @@ namespace mine_sweeper{
                     for (int y2 = y-1; y2 < y+2; y2++){
                         if((x2 >= 0 && y2 >=0) && (x2 <= size-1 && y2 <= size-1) && grid[x2,y2].getCovered()){
                             makeMove(x2, y2);
-                            drawGame();
                         }
                     }
                 }

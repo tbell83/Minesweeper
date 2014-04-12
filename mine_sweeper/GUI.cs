@@ -10,8 +10,8 @@ using System.Windows.Forms;
 
 namespace mine_sweeper{
     public partial class GUI_form : Form{
-        const int size = 3;
-        const int mines = 1;
+        const int size = 10;
+        const int mines = 10;
         int wins = 0;
         int losses = 0;
         Button[,] grid;
@@ -21,18 +21,47 @@ namespace mine_sweeper{
         public GUI_form(){
             InitializeComponent();
             generateGrid();
+            Button reset = new Button();
+            reset.Size = new System.Drawing.Size(50, 30);
+            reset.Location = new Point(((size * 30) / 2)-25, (size*30)+5);
+            reset.Text = "Reset";
+            reset.Click += new EventHandler(resetGame);
+            this.Controls.Add(reset);
         }
 
         private void Form1_Load(object sender, EventArgs e){
             game.drawField();
-            this.Size = new System.Drawing.Size((size * 30) + 17, (size * 30) + 38);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Size = new System.Drawing.Size((size * 30) + 17, (size * 30) + 76);
+        }
+
+        private void resetGame(object sender, EventArgs e){
+            game.mineTheField();
+            redraw();
         }
 
         private void afterClick(){
+            redraw();
             if (game.gameWon()){
                 gameOver(true);
             }else if(game.gameLost()){
                 gameOver(false);
+            }
+        }
+
+        private void redraw(){
+            for(int x = 0;x < size;x++){
+                for(int y = 0;y < size;y++){
+                    grid[x, y].BackColor = Color.LightGray;
+                    string text = game.drawCell(x,y);
+                    grid[x,y].Text = text;
+                    if (text == "0") {
+                        grid[x, y].Text = "";
+                        grid[x, y].BackColor = Color.Green;
+                    }else if(text == "F"){
+                        grid[x, y].BackColor = Color.Yellow;
+                    }
+                }
             }
         }
 
@@ -54,20 +83,28 @@ namespace mine_sweeper{
                     Button button = new Button();
                     button.Location = new Point(x*30,y*30);
                     button.Size = new Size(30, 30);
-                    button.Text = string.Format("{0},{1}", x, y);
-                    button.MouseDown += new MouseEventHandler((s, e) => cellClick(s, e, x, y));
+                    button.Tag = string.Format("{0},{1}", x, y);
+                    button.Text = game.drawCell(x, y);
+                    button.BackColor = Color.LightGray;
+                    button.FlatStyle = FlatStyle.Flat;
                     grid[x, y] = button;
+                    button.MouseDown += new MouseEventHandler(cellClick);
                     this.Controls.Add(button);
                 }
             }
         }
 
-        public void cellClick(object sender, MouseEventArgs e, int x, int y){
+        public void cellClick(object sender, MouseEventArgs e){
+            Button button = sender as Button;
+            string[] coord = button.Tag.ToString().Split(',');
+            int x = Convert.ToInt16(coord[0]);
+            int y = Convert.ToInt16(coord[1]);
             if(e.Button == System.Windows.Forms.MouseButtons.Left){
-                MessageBox.Show(string.Format("Left {0},{1}", x, y));
+                game.makeMove(x, y);
             }else if(e.Button == System.Windows.Forms.MouseButtons.Right){
-                MessageBox.Show(string.Format("Right {0},{1}", x, y));
+                game.flagCell(x, y);
             }
+            afterClick();
         }
     }
 }

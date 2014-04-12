@@ -48,6 +48,7 @@ namespace mine_sweeper{
 
         public void setUncovered(){
             covered = false;
+            flagged = false;
         }
 
         public bool getCovered(){
