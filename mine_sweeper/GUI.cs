@@ -12,8 +12,9 @@ namespace mine_sweeper{
     public partial class GUI_form : Form{
         private const int size = 10;
         private const int mines = 10;
-        private int wins = 0;
-        private int losses = 0;
+        public int wins = 0;
+        public int losses = 0;
+        public int games = 0;
         private Button[,] grid;
         private Bitmap flag = new Bitmap(mine_sweeper.Properties.Resources.flag, new Size(30,30));
         private Bitmap mine = new Bitmap(mine_sweeper.Properties.Resources.mine, new Size(30, 30));
@@ -24,7 +25,7 @@ namespace mine_sweeper{
             InitializeComponent();
             generateGrid();
             Button reset = new Button();
-            reset.Size = new System.Drawing.Size(50, 30);
+            reset.Size = new Size(50, 30);
             reset.Location = new Point(((size * 30) / 2)-25, (size*30)+5);
             reset.Text = "Reset";
             reset.Click += new EventHandler(resetGame);
@@ -33,8 +34,8 @@ namespace mine_sweeper{
 
         private void Form1_Load(object sender, EventArgs e){
             game.drawField();
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Size = new System.Drawing.Size((size * 30) + 17, (size * 30) + 76);
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.Size = new Size((size * 30) + 17, (size * 30) + 76);
         }
 
         private void resetGame(object sender, EventArgs e){
