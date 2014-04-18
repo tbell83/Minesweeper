@@ -95,6 +95,12 @@
       <DependentUpon>Main_Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="minesweeper.cs" />
+    <Compile Include="minesweeperDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>minesweeperDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="End_of_Game.resx">
@@ -113,6 +119,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="minesweeperDataSet.xsc">
+      <DependentUpon>minesweeperDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="minesweeperDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>minesweeperDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="minesweeperDataSet.xss">
+      <DependentUpon>minesweeperDataSet.xsd</DependentUpon>
+    </None>
     <None Include="mine_sweeper_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -149,6 +166,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="img\mine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="minesweeper.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

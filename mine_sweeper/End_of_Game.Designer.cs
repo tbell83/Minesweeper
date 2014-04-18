@@ -35,6 +35,8 @@
             this.btnReset = new System.Windows.Forms.Button();
             this.btnQuit = new System.Windows.Forms.Button();
             this.lblGameState = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblGames = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -75,7 +77,7 @@
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(67, 70);
+            this.btnReset.Location = new System.Drawing.Point(67, 81);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(75, 23);
             this.btnReset.TabIndex = 4;
@@ -85,7 +87,7 @@
             // 
             // btnQuit
             // 
-            this.btnQuit.Location = new System.Drawing.Point(67, 99);
+            this.btnQuit.Location = new System.Drawing.Point(67, 110);
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Size = new System.Drawing.Size(75, 23);
             this.btnQuit.TabIndex = 5;
@@ -102,11 +104,31 @@
             this.lblGameState.TabIndex = 6;
             this.lblGameState.Text = "label3";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(66, 60);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Games:";
+            // 
+            // lblGames
+            // 
+            this.lblGames.AutoSize = true;
+            this.lblGames.Location = new System.Drawing.Point(107, 60);
+            this.lblGames.Name = "lblGames";
+            this.lblGames.Size = new System.Drawing.Size(35, 13);
+            this.lblGames.TabIndex = 8;
+            this.lblGames.Text = "label4";
+            // 
             // End_of_Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(206, 150);
+            this.Controls.Add(this.lblGames);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.lblGameState);
             this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.btnReset);
@@ -130,5 +152,7 @@
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnQuit;
         private System.Windows.Forms.Label lblGameState;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblGames;
     }
 }

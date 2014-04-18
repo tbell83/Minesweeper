@@ -10,18 +10,19 @@ using System.Windows.Forms;
 
 namespace mine_sweeper{
     public partial class GUI_form : Form{
-        private const int size = 10;
-        private const int mines = 10;
-        public int wins = 0;
-        public int losses = 0;
-        public int games = 0;
+        int size;
+        int mines;
         private Button[,] grid;
         private Bitmap flag = new Bitmap(mine_sweeper.Properties.Resources.flag, new Size(30,30));
         private Bitmap mine = new Bitmap(mine_sweeper.Properties.Resources.mine, new Size(30, 30));
+        minesweeper game;
+        Player player;
 
-        minesweeper game = new minesweeper(size, mines);
-
-        public GUI_form(){
+        public GUI_form(minesweeper game, int size, int mines, Player player){
+            this.size = size;
+            this.mines = mines;
+            this.game = game;
+            this.player = player;
             InitializeComponent();
             generateGrid();
             Button reset = new Button();
@@ -33,25 +34,24 @@ namespace mine_sweeper{
         }
 
         private void Form1_Load(object sender, EventArgs e){
-            game.drawField();
+            game.makeField();
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.Size = new Size((size * 30) + 17, (size * 30) + 76);
         }
 
         private void resetGame(object sender, EventArgs e){
             game.reset();
-            game.drawField();
+            game.makeField();
             foreach (Button item in grid) { item.Enabled = true; }
             redraw();
         }
 
         private void afterClick(){
-            redraw();
-            if (game.gameWon()){
-                gameOver(true);
-            }else if(game.gameLost()){
-                gameOver(false);
+            if(game.gameOver()){
+                redraw();
+                gameOver();
             }
+            redraw();
         }
 
         private void redraw(){
@@ -75,16 +75,8 @@ namespace mine_sweeper{
             }
         }
 
-        private void gameOver(bool gameState){
-            if (gameState){
-                wins++;
-            }else{
-                losses++;
-                game.showMines();
-                redraw();
-                foreach (Button item in grid) { item.Enabled = false; }
-            }
-            End_of_Game eog = new End_of_Game(wins, losses, gameState);
+        private void gameOver(){
+            End_of_Game eog = new End_of_Game(game.getWins(), game.getLosses(), game.gameWon(), game.getGames(), player.getName());
             this.Enabled = false;
             eog.ShowDialog(this);
             this.Enabled = true;

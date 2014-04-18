@@ -8,6 +8,9 @@ namespace mine_sweeper{
     public class minesweeper{
         private int size;
         private int mines;
+        private int wins = 0;
+        private int losses = 0;
+        private int games = 0;
         private cell[,] grid;
         private List<int[]> minePlacement;
 
@@ -26,6 +29,7 @@ namespace mine_sweeper{
                 }
             }
             mineTheField();
+            games++;
         }
 
         private  void mineTheField(){
@@ -104,7 +108,7 @@ namespace mine_sweeper{
             }
         }
 
-        public void drawField(){
+        public void makeField(){
             Console.WriteLine();
             for (int x = 0; x < size; x++) {
                 for (int y = 0; y < size; y++) {
@@ -152,9 +156,25 @@ namespace mine_sweeper{
 
         }
 
-        public void flagCell(int x, int y){
-            grid[x, y].setFlagged();
+        public void flagCell(int x, int y){ grid[x, y].setFlagged(); }
+
+        public bool gameOver(){
+            if(gameLost()){
+                losses++;
+                this.showMines();
+                return true;
+            }else if(gameWon()){
+                wins++;
+                return true;
+            }
+            return false;
         }
+
+        public int getWins(){ return wins; }
+
+        public int getLosses(){ return losses; }
+
+        public int getGames() { return games; }
 
         public bool gameWon(){
             foreach (cell item in grid){

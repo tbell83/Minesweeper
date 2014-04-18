@@ -18,21 +18,13 @@ namespace mine_sweeper{
             flagged = false;
         }
 
-        public void setNeighbors(){
-            neighbors++;
-        }
+        public void setNeighbors(){ neighbors++; }
 
-        public int getNeighbors(){
-            return neighbors;
-        }
+        public int getNeighbors(){ return neighbors; }
 
-        public void setMined(){
-            mine = true;
-        }
+        public void setMined(){ mine = true; }
 
-        public bool getMined(){
-            return mine;
-        }
+        public bool getMined(){ return mine; }
 
         public void setFlagged(){
             if (flagged){
@@ -42,17 +34,13 @@ namespace mine_sweeper{
             }
         }
 
-        public bool getFlagged(){
-            return flagged;
-        }
+        public bool getFlagged(){ return flagged; }
 
         public void setUncovered(){
             covered = false;
             flagged = false;
         }
 
-        public bool getCovered(){
-            return covered;
-        }
+        public bool getCovered(){ return covered; }
     }
 }
