@@ -20,6 +20,15 @@ namespace mine_sweeper{
             reset();
         }
 
+        public minesweeper(int size, int mines, int games, int wins, int losses){
+            this.games = games;
+            this.wins = wins;
+            this.losses = losses;
+            this.size = size;
+            this.mines = mines;
+            reset();
+        }
+
         public void reset(){
             grid = new cell[size, size];
             for (int x = 0; x < size; x++) {

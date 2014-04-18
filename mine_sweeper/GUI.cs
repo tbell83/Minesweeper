@@ -76,7 +76,12 @@ namespace mine_sweeper{
         }
 
         private void gameOver(){
-            End_of_Game eog = new End_of_Game(game.getWins(), game.getLosses(), game.gameWon(), game.getGames(), player.getName());
+            int wins= game.getWins();
+            int losses = game.getLosses();
+            int games = game.getGames();
+            string name = player.getName();
+            End_of_Game eog = new End_of_Game(wins, losses, game.gameWon(), games, name);
+            player.setPlayer(wins, losses, games);
             this.Enabled = false;
             eog.ShowDialog(this);
             this.Enabled = true;

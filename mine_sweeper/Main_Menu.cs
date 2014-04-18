@@ -56,7 +56,7 @@ namespace mine_sweeper{
             mines = Convert.ToInt16(txtMines.Text);
             size = Convert.ToInt16(txtSize.Text);
             player = new Player(txtPlayer.Text);
-            minesweeper game = new minesweeper(size, mines);
+            game = new minesweeper(size, mines, player.getGames(), player.getWins(), player.getLosses());
             GUI_form gui = new GUI_form(game, size, mines, player);
             gui.ShowDialog();
         }
