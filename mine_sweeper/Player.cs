@@ -33,6 +33,7 @@ namespace mine_sweeper{
             myConnection.Open();
             insertCmd.ExecuteNonQuery();
             myConnection.Close();
+            getStats();
         }
 
         public void getStats(){

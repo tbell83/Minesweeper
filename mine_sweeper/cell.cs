@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace mine_sweeper{
-    class cell{
+    public class cell{
         bool mine;
         bool flagged;
         bool covered;
