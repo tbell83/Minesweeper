@@ -41,7 +41,7 @@ namespace mine_sweeper{
             games++;
         }
 
-        private  void mineTheField(){
+        private void mineTheField(){
             Random rand = new Random();
             minePlacement = new List<int[]>();
             for (int i = 0; i < mines; i++) {

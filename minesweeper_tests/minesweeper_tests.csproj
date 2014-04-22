@@ -54,6 +54,7 @@
     <Compile Include="cell_test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="player_test.cs" />
+    <Compile Include="minesweeper_test.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\mine_sweeper\mine_sweeper.csproj">
