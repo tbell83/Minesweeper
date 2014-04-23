@@ -36,19 +36,13 @@ namespace minesweeper_tests
         public void test_reset(){
             minesweeper game = new minesweeper(size, mines);
             var priObj =  new PrivateObject(game);
-            priObj.GetProperty("grid");
-        }
-
-        [TestMethod]
-        public void test_mineTheField(){
-            minesweeper game = new minesweeper(size, mines);
             Assert.Fail();
         }
 
         [TestMethod]
         public void test_drawCell(){
             minesweeper game = new minesweeper(size, mines);
-            Assert.Fail();
+            Assert.AreEqual(game.drawCell(size, size), "");
         }
 
         [TestMethod]
@@ -60,13 +54,15 @@ namespace minesweeper_tests
         [TestMethod]
         public void test_flagCell(){
             minesweeper game = new minesweeper(size, mines);
-            Assert.Fail();
+            game.flagCell(size, size);
+            Assert.AreEqual("F", game.drawCell(size, size));
         }
 
         [TestMethod]
         public void test_gameOver(){
             minesweeper game = new minesweeper(size, mines);
-            Assert.Fail();
+            var priObj = new PrivateObject(game);
+
         }
 
         [TestMethod]
