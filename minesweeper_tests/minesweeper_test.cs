@@ -33,29 +33,10 @@ namespace minesweeper_tests
         }
 
         [TestMethod]
-        public void test_reset(){
-            minesweeper game = new minesweeper(size, mines);
-            var priObj =  new PrivateObject(game);
-            Assert.Fail();
-        }
-
-        [TestMethod]
-        public void test_drawCell(){
-            minesweeper game = new minesweeper(size, mines);
-            Assert.AreEqual(game.drawCell(size, size), "");
-        }
-
-        [TestMethod]
-        public void test_makeMove(){
-            minesweeper game = new minesweeper(size, mines);
-            Assert.Fail();
-        }
-
-        [TestMethod]
         public void test_flagCell(){
             minesweeper game = new minesweeper(size, mines);
-            game.flagCell(size, size);
-            Assert.AreEqual("F", game.drawCell(size, size));
+            game.flagCell(size-1, size-1);
+            Assert.AreEqual("F", game.drawCell(size-1, size-1));
         }
 
         [TestMethod]
@@ -67,38 +48,32 @@ namespace minesweeper_tests
 
         [TestMethod]
         public void test_getWins(){
-            minesweeper game = new minesweeper(size, mines);
-            Assert.Fail();
+            minesweeper game = new minesweeper(size, mines, games, wins, losses);
+            Assert.AreEqual(wins, game.getWins());
         }
 
         [TestMethod]
         public void test_getLosses(){
-            minesweeper game = new minesweeper(size, mines);
-            Assert.Fail();
+            minesweeper game = new minesweeper(size, mines, games, wins, losses);
+            Assert.AreEqual(losses, game.getLosses());
         }
 
         [TestMethod]
         public void test_getGames(){
-            minesweeper game = new minesweeper(size, mines);
-            Assert.Fail();
+            minesweeper game = new minesweeper(size, mines, games, wins, losses);
+            Assert.AreEqual(games+1, game.getGames());
         }
 
         [TestMethod]
         public void test_gameWon(){
             minesweeper game = new minesweeper(size, mines);
-            Assert.Fail();
+            Assert.AreEqual(false, game.gameWon());
         }
 
         [TestMethod]
         public void test_gameLost(){
             minesweeper game = new minesweeper(size, mines);
-            Assert.Fail();
-        }
-
-        [TestMethod]
-        public void test_showMines(){
-            minesweeper game = new minesweeper(size, mines);
-            Assert.Fail();
+            Assert.AreEqual(false, game.gameLost());
         }
     }
 }

@@ -24,10 +24,6 @@ namespace mine_sweeper{
             lblGames.Text = games.ToString();
         }
 
-        private void btnReset_Click(object sender, EventArgs e){
-            this.Close();
-        }
-
         private void btnQuit_Click(object sender, EventArgs e){
             this.Close();
         }

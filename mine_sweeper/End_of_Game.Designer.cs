@@ -32,7 +32,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lblLosses = new System.Windows.Forms.Label();
             this.lblWins = new System.Windows.Forms.Label();
-            this.btnReset = new System.Windows.Forms.Button();
             this.btnQuit = new System.Windows.Forms.Button();
             this.lblGameState = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -75,23 +74,13 @@
             this.lblWins.TabIndex = 3;
             this.lblWins.Text = "label4";
             // 
-            // btnReset
-            // 
-            this.btnReset.Location = new System.Drawing.Point(67, 81);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(75, 23);
-            this.btnReset.TabIndex = 4;
-            this.btnReset.Text = "Play Again";
-            this.btnReset.UseVisualStyleBackColor = true;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
-            // 
             // btnQuit
             // 
-            this.btnQuit.Location = new System.Drawing.Point(67, 110);
+            this.btnQuit.Location = new System.Drawing.Point(67, 98);
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Size = new System.Drawing.Size(75, 23);
             this.btnQuit.TabIndex = 5;
-            this.btnQuit.Text = "Quit";
+            this.btnQuit.Text = "Close";
             this.btnQuit.UseVisualStyleBackColor = true;
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
@@ -131,7 +120,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblGameState);
             this.Controls.Add(this.btnQuit);
-            this.Controls.Add(this.btnReset);
             this.Controls.Add(this.lblWins);
             this.Controls.Add(this.lblLosses);
             this.Controls.Add(this.label2);
@@ -149,7 +137,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblLosses;
         private System.Windows.Forms.Label lblWins;
-        private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnQuit;
         private System.Windows.Forms.Label lblGameState;
         private System.Windows.Forms.Label label3;
