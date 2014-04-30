@@ -76,7 +76,7 @@ namespace mine_sweeper{
                 mines = Convert.ToInt16(txtMines.Text);
                 size = Convert.ToInt16(txtSize.Text);
                 if (txtPlayer.Text == ""){
-                    player = new Player("Anonymous");
+                    txtPlayer.Text = "Anonymous";
                 }
                 player = new Player(txtPlayer.Text);
                 if (size * size < mines){
@@ -97,6 +97,8 @@ namespace mine_sweeper{
 
         private void showStats(object sender, EventArgs e){
             Form statsPage = new Form();
+            statsPage.FormBorderStyle = FormBorderStyle.Fixed3D;
+            statsPage.Size = new Size(317, 300);
 
             const string connectString = "provider=Microsoft.ACE.OLEDB.12.0;Data Source=c:/users/tbell/source/repos/game/mine_sweeper/minesweeper.accdb;";
             OleDbConnection myConnection = new OleDbConnection(connectString);
@@ -106,17 +108,19 @@ namespace mine_sweeper{
             dataAdapter.Fill(dataset);
 
             ListBox results = new ListBox();
-            foreach(DataRow row in dataset.Tables[0].Rows){
-                Label player = new Label();
-                Label games = new Label();
-                Label wins = new Label();
-                Label losses = new Label();
-                player.Text = Convert.ToString(row["player"]);
-                games.Text = Convert.ToString(row["games"]);
-                wins.Text = Convert.ToString(row["wins"]);
-                losses.Text = Convert.ToString(row["losses"]);
+            results.Items.Add("Games\tWins\tLosses\tPlayer");
+            results.Size = new Size(300, 200);
 
+            foreach(DataRow row in dataset.Tables[0].Rows){
+                string thing = "";
+                thing += String.Format("{0}\t",Convert.ToString(row["games"]));
+                thing += String.Format("{0}\t",Convert.ToString(row["wins"]));
+                thing += String.Format("{0}\t",Convert.ToString(row["losses"]));
+                thing += String.Format("{0}", Convert.ToString(row["player"]));
+                results.Items.Add(thing);
             }
+
+            statsPage.Controls.Add(results);
 
             this.Hide();
             statsPage.ShowDialog();
